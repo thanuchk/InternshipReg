@@ -1,0 +1,551 @@
+@font-face {
+    font-family: 'noto_sans_thairegular';
+    src: url('../fonts/notosansthai-regular-webfont.eot');
+    src: url('../fonts/notosansthai-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/notosansthai-regular-webfont.woff2') format('woff2'),
+         url('../fonts/notosansthai-regular-webfont.woff') format('woff'),
+         url('../fonts/notosansthai-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'noto_sans_thaibold';
+    src: url('../fonts/notosansthai-bold-webfont.eot');
+    src: url('../fonts/notosansthai-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/notosansthai-bold-webfont.woff2') format('woff2'),
+         url('../fonts/notosansthai-bold-webfont.woff') format('woff'),
+         url('../fonts/notosansthai-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'noto_sansregular';
+    src: url('../fonts/notosans-regular-webfont.eot');
+    src: url('../fonts/notosans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/notosans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/notosans-regular-webfont.woff') format('woff'),
+         url('../fonts/notosans-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'noto_sansbold';
+    src: url('../fonts/notosans-bold-webfont.eot');
+    src: url('../fonts/notosans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/notosans-bold-webfont.woff2') format('woff2'),
+         url('../fonts/notosans-bold-webfont.woff') format('woff'),
+         url('../fonts/notosans-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body, html {
+    font-family: 'noto_sansregular', 'noto_sans_thairegular';
+}
+.card.card-cascade.narrower .view.view-cascade {
+	margin-bottom: 15px;
+}
+.label-select{
+	display: block;
+}
+.justify-content-between {
+	margin-bottom: 20px;
+}
+
+.justify-content-center{
+	margin-top: 20px;
+}
+
+table .chip {
+	margin: 0px;
+}
+
+.form-margin-left{
+	margin-left: 40px;
+}
+
+.container-fluid .card-body-cascade .form-control-required{
+	display: inline-block!important;
+    width: 90%;
+}
+
+.card .card-body .form-control-required{
+	display: inline-block!important;
+    width: 90%;
+}
+
+.label-form{
+	display: block;
+}
+
+.container-fluid .card-body-cascade .label-form{
+	padding-top: 20px;
+}
+
+.container-fluid .card-body-cascade .form-with-button{
+	display: inline-block;
+    width: 70%;
+}
+
+.container-fluid .card-body-cascade .button-form{
+	margin-left: 15px;
+    position: absolute;
+    margin-top: 0px;
+}
+
+.container-fluid .card-body-cascade .mdb-select{
+	display: inline-block;
+    width: 90%;
+}
+.container-fluid .card-body-cascade font{
+	padding-left: 5px;
+/*     position: absolute; */
+}
+
+/* Calendar content */
+.fc .fc-content {
+    background-color: #ffffff00;
+    padding: 2px;
+    color: #fff;
+}
+
+table.table a {
+    color: #ffffff;
+}
+
+.container-fluid .error{
+	color: red;
+}
+
+.footer-copyright{
+	background-color: #024a9a!important;
+    position: fixed;
+    z-index: 9;
+    bottom: 0px;
+    width: 100%;
+}
+
+/* Start customized style */
+.textBoxSmall {
+	    display: inline;
+	    width: 90% !important;
+}
+
+.width-50 {
+	  width: 45% !important;
+}
+
+.text-align-right{
+    text-align: right;
+}
+
+#floatingBarsG{
+	position:relative;
+	width:62px;
+	height:77px;
+	margin:auto;
+	top: 50%;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.hide-overlay {
+	display: none;
+}
+
+.blockG{
+	position:absolute;
+	background-color:#FFFFFF;
+	width:10px;
+	height:24px;
+	border-radius:8px 8px 0 0;
+		-o-border-radius:8px 8px 0 0;
+		-ms-border-radius:8px 8px 0 0;
+		-webkit-border-radius:8px 8px 0 0;
+		-moz-border-radius:8px 8px 0 0;
+	transform:scale(0.4);
+		-o-transform:scale(0.4);
+		-ms-transform:scale(0.4);
+		-webkit-transform:scale(0.4);
+		-moz-transform:scale(0.4);
+	animation-name:fadeG;
+		-o-animation-name:fadeG;
+		-ms-animation-name:fadeG;
+		-webkit-animation-name:fadeG;
+		-moz-animation-name:fadeG;
+	animation-duration:1.04s;
+		-o-animation-duration:1.04s;
+		-ms-animation-duration:1.04s;
+		-webkit-animation-duration:1.04s;
+		-moz-animation-duration:1.04s;
+	animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		-ms-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+	animation-direction:normal;
+		-o-animation-direction:normal;
+		-ms-animation-direction:normal;
+		-webkit-animation-direction:normal;
+		-moz-animation-direction:normal;
+}
+
+#rotateG_01{
+	left:0;
+	top:28px;
+	animation-delay:0.39s;
+		-o-animation-delay:0.39s;
+		-ms-animation-delay:0.39s;
+		-webkit-animation-delay:0.39s;
+		-moz-animation-delay:0.39s;
+	transform:rotate(-90deg);
+		-o-transform:rotate(-90deg);
+		-ms-transform:rotate(-90deg);
+		-webkit-transform:rotate(-90deg);
+		-moz-transform:rotate(-90deg);
+}
+
+#rotateG_02{
+	left:8px;
+	top:10px;
+	animation-delay:0.52s;
+		-o-animation-delay:0.52s;
+		-ms-animation-delay:0.52s;
+		-webkit-animation-delay:0.52s;
+		-moz-animation-delay:0.52s;
+	transform:rotate(-45deg);
+		-o-transform:rotate(-45deg);
+		-ms-transform:rotate(-45deg);
+		-webkit-transform:rotate(-45deg);
+		-moz-transform:rotate(-45deg);
+}
+
+#rotateG_03{
+	left:26px;
+	top:3px;
+	animation-delay:0.65s;
+		-o-animation-delay:0.65s;
+		-ms-animation-delay:0.65s;
+		-webkit-animation-delay:0.65s;
+		-moz-animation-delay:0.65s;
+	transform:rotate(0deg);
+		-o-transform:rotate(0deg);
+		-ms-transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+		-moz-transform:rotate(0deg);
+}
+
+#rotateG_04{
+	right:8px;
+	top:10px;
+	animation-delay:0.78s;
+		-o-animation-delay:0.78s;
+		-ms-animation-delay:0.78s;
+		-webkit-animation-delay:0.78s;
+		-moz-animation-delay:0.78s;
+	transform:rotate(45deg);
+		-o-transform:rotate(45deg);
+		-ms-transform:rotate(45deg);
+		-webkit-transform:rotate(45deg);
+		-moz-transform:rotate(45deg);
+}
+
+#rotateG_05{
+	right:0;
+	top:28px;
+	animation-delay:0.9099999999999999s;
+		-o-animation-delay:0.9099999999999999s;
+		-ms-animation-delay:0.9099999999999999s;
+		-webkit-animation-delay:0.9099999999999999s;
+		-moz-animation-delay:0.9099999999999999s;
+	transform:rotate(90deg);
+		-o-transform:rotate(90deg);
+		-ms-transform:rotate(90deg);
+		-webkit-transform:rotate(90deg);
+		-moz-transform:rotate(90deg);
+}
+
+#rotateG_06{
+	right:8px;
+	bottom:7px;
+	animation-delay:1.04s;
+		-o-animation-delay:1.04s;
+		-ms-animation-delay:1.04s;
+		-webkit-animation-delay:1.04s;
+		-moz-animation-delay:1.04s;
+	transform:rotate(135deg);
+		-o-transform:rotate(135deg);
+		-ms-transform:rotate(135deg);
+		-webkit-transform:rotate(135deg);
+		-moz-transform:rotate(135deg);
+}
+
+#rotateG_07{
+	bottom:0;
+	left:26px;
+	animation-delay:1.1700000000000002s;
+		-o-animation-delay:1.1700000000000002s;
+		-ms-animation-delay:1.1700000000000002s;
+		-webkit-animation-delay:1.1700000000000002s;
+		-moz-animation-delay:1.1700000000000002s;
+	transform:rotate(180deg);
+		-o-transform:rotate(180deg);
+		-ms-transform:rotate(180deg);
+		-webkit-transform:rotate(180deg);
+		-moz-transform:rotate(180deg);
+}
+
+#rotateG_08{
+	left:8px;
+	bottom:7px;
+	animation-delay:1.3s;
+		-o-animation-delay:1.3s;
+		-ms-animation-delay:1.3s;
+		-webkit-animation-delay:1.3s;
+		-moz-animation-delay:1.3s;
+	transform:rotate(-135deg);
+		-o-transform:rotate(-135deg);
+		-ms-transform:rotate(-135deg);
+		-webkit-transform:rotate(-135deg);
+		-moz-transform:rotate(-135deg);
+}
+
+
+
+@keyframes fadeG{
+	0%{
+		background-color:#000000;
+	}
+
+	100%{
+		background-color:#FFFFFF;
+	}
+}
+
+@-o-keyframes fadeG{
+	0%{
+		background-color:#000000;
+	}
+
+	100%{
+		background-color:#FFFFFF;
+	}
+}
+
+@-ms-keyframes fadeG{
+	0%{
+		background-color:#000000;
+	}
+
+	100%{
+		background-color:#FFFFFF;
+	}
+}
+
+@-webkit-keyframes fadeG{
+	0%{
+		background-color:#000000;
+	}
+
+	100%{
+		background-color:#FFFFFF;
+	}
+}
+
+@-moz-keyframes fadeG{
+	0%{
+		background-color:#000000;
+	}
+
+	100%{
+		background-color:#FFFFFF;
+	}
+}
+
+/* UI for box of autocomplete*/
+#ui-id-1 {
+	    background-color: #EAEAEA;;
+	    list-style-type: none;
+   		padding-left: 5px;
+   		width: 90%;
+    	width: 350px !important;
+}
+
+#ui-id-1 li:hover {
+  background-color: white;
+}
+
+#ui-id-2 {
+	     background-color: #EAEAEA;; 
+	    list-style-type: none;
+   		padding-left: 5px;
+   		width: 90%;
+    	width: 350px !important;
+}
+
+#ui-id-2 li:hover {
+  background-color: white;
+}
+
+#ui-id-3 {
+	    background-color: #EAEAEA;;
+	    list-style-type: none;
+   		padding-left: 5px;
+   		width: 90%;
+}
+
+#ui-id-3 li:hover {
+  background-color: white;
+}
+
+/* End customized style */    
+
+/*Start mdb scroll style*/
+
+.scrollbar {
+float: left;
+height: 500px;
+width: 800px;
+background: #fff;
+overflow-y: scroll;
+}
+.force-overflow {
+min-height: 450px;
+}
+
+.scrollbar-primary::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #4285F4; }
+
+.scrollbar-danger::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-danger::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-danger::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #ff3547; }
+
+.scrollbar-warning::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-warning::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-warning::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #FF8800; }
+
+.scrollbar-success::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-success::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-success::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #00C851; }
+
+.scrollbar-info::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-info::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-info::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #33b5e5; }
+
+.scrollbar-default::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-default::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-default::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #2BBBAD; }
+
+.scrollbar-secondary::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-secondary::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-secondary::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #aa66cc; }
+
+/*End mdb scroll style*/
+/*Start overide data table*/
+.textCenter {
+	text-align : center;
+}
+.dataTables_length {
+	display : none;
+}
+
+#pettyCashReimburseDataTable_filter {
+	display : none;
+}
+
+#pettyCashAdvanceDataTable_filter {
+	display : none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+	background: #29b6f6 !important;
+	color: #FFFFFF !important;
+    border: 1px solid #007bff !important;
+}
+
+.paginate_button:hover {
+	background: #6610f2 !important;
+}
+
+/*End overide data table*/
