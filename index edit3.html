@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>TraineeReg - ดูรายละเอียดข้อมูล</title>
+    <title>Info Editing - แก้ไขประวัติการฝึกอบรม</title>
     <!-- MDB icon -->
     <!-- <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon"> -->
     <!-- Font Awesome -->
@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!---Google fonts Prompt---->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="css/mdb.min.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Google Fonts Prompt -->
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
   
   
   <!----.CSS---->
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="css main/timegridmain.css">
 </head>
 
-<body class="fixed-sn white-skin" style="font-family: 'Prompt', sans-serif;" >
+<body class="fixed-sn white-skin" style="font-family: 'Prompt', sans-serif;">
   <div id="overlay" class="hide-overlay">
     <div id="floatingBarsG">
       <div class="blockG" id="rotateG_01"></div>
@@ -579,623 +579,182 @@
  
          <br>
      
-        
- 
    <form name="WKM001" method="post" action="/uat/km/personalBlog.do" onsubmit="_submit_NestedForm(this)">
      <input type="hidden" name="cmd" value="">
      <input type="hidden" name="id" value="">
      
-     <!---upcard---->
-     <div class="card card-cascade narrower">
-       <div class="row">
-         <div class="col-md-5">
-           <div class="view view-cascade gradient-card-header blue-gradient">
-             <h6 class="h6-responsive mb-0">ค้นหาข้อมูลนักศึกษาฝึกงาน</h6>
-           </div>
-         </div>
-       </div>
-       <div class="card-body card-body-cascade mt-5 pb-3 mx-4" >
-        
-        <!---row1--->
-        <div class="form-group row mb-5 align-items-md-center">
-          <div class="col-md-2 text-right px-0">
-            <a>ประเภทการฝึกงาน&nbsp;:</a>
-          </div>
-          <div class="col-md-4 ">
-            <a>ฝึกงาน</a>
-          </div>
-          <div class="col-md-2 text-right px-0">
-            <a>ตำแหน่ง&nbsp;:</a>
-          </div>
-          <div class="col-md-4 ">
-            <a>Frontend</a>
-          </div>
-        </div>
-
-        <!----row2----->
-        <div class="form-group row mb-5 align-items-md-center">
-          <div class="col-md-2 text-right px-0">
-            <a>วันที่เริ่ม&nbsp;:</a>
-          </div>
-          <div class="col-md-4 ">
-            <a>2563-05-05</a>
-          </div>
-          <div class="col-md-2 text-right px-0">
-            <a>วันที่สิ้นสุด&nbsp;:</a>
-          </div>
-          <div class="col-md-4 ">
-            <a>2563-07-05</a>
-          </div>
-        </div>
-
-        <!---row3---->
-        <div class="form-group row mb-5 align-items-md-center">
-          <div class="col-md-2 text-right px-0">
-            <a>รวมเวลา&nbsp;:</a>
-          </div>
-          <div class="col-md-4 ">
-            <a>60&nbsp;วัน</a>
-          </div>
-          <div class="col-md-2 text-right px-0">
-            <a>สาขาที่ฝึกงาน&nbsp;:</a>
-          </div>
-          <div class="col-md-4 ">
-            <a>เชียงใหม่</a>
-          </div>
-        </div>
-    </div>
-       
-       </div>
-       <!----/upcard---->
-
-       <!---collapse parts--->
-<div class="my-5   ">
-  <!-- รายละเอียดประวัติส่วนตัว-->
-  <div class="card accordion md-accordion mb-3" id="accordionEx" role="tablist" aria-multiselectable="true">
-      <div class="card ">
-
-        <div class="card-header py-4"  style="background-color: #ADE3FB;" >
-          <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
-            aria-controls="collapseOne1">
-            <h6 class="mb-0 text-dark mx-3" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-              รายละเอียดประวัติส่วนตัว<i class="fas fa-angle-down rotate-icon"></i>
-            </h6>
-          </a>
-        </div>
-
-        <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
-          <div class="card-body mt-4 pl-5">
-            <!----row1----->
-              <div class="row text-dark mb-5 align-items-md-center">
-                  <div class="col-md-1 text-right px-0 " >
-                    <a>ชื่อ&nbsp;:</a> 
-                  </div>
-                  <div class="col-md-3 " >
-                    <a>นางสาวสิริกร</a>
-                  </div>
-                  <div class="col-md-1 text-right px-0">
-                    <a>นามสกุล&nbsp;:</a>
-                  </div>
-                  <div class="col-md-3 ">
-                    <a>เรืองสุวรรณ</a>
-                  </div>
-                  <div class="col-md-1 text-right px-0 ">
-                    <a>เพศ&nbsp;:</a>
-                  </div>
-                  <div class="col-md-3 " >
-                    <a>หญิง</a>
-                  </div>
+      <!-- รายละเอียดประวัติการฝึกอบรม-->
+      <div class="card">
+        <div class="card-header row mx-0 align-items-md-center" style="background-color:  #ADE3FB;">
+            <div class="col-md-4" >
+              <h6 class="mb-0 text-dark " style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">รายละเอียดประวัติการฝึกอบรม</h6>
+            </div>
+              <div class="col-md-8 text-right  px-0">
+                    <button type="button" class="btn btn-md rounded waves-effect waves-light" 
+                    style="border: 1px solid #FFFFFF;
+                    color: white;
+                    box-sizing: border-box;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    background: #00C851;
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                    <i class="fa fa-plus mr-1" aria-hidden="true"></i>
+                    <a>เพิ่มประวัติการฝึกอบรม</a>
+                  </button>      
               </div>
+              </div>
+     
+        <div class="card-body">
 
-              <!---row2--->
-              <div class="row text-dark mb-5 align-items-md-center">
-                <div class="col-md-1 text-right px-0 " >
-                  <a>Name&nbsp;:</a> 
-                </div>
-                <div class="col-md-3 " >
-                  <a>Sirikorn</a>
-                </div>
-                <div class="col-md-1 text-right px-0 ">
-                  <a>Surname&nbsp;:</a>
-                </div>
-                <div class="col-md-3 ">
-                  <a>Ruengsuwan</a>
-                </div>
-                <div class="col-md-1 text-right px-0 ">
-                  <a>ชื่อเล่น&nbsp;:</a>
-                </div>
-                <div class="col-md-3 " >
-                  <a>มินนี่</a>
-                </div>
+          <!---row1---->
+          <div class="row text-dark align-items-md-center mb-2">
+            <div class="col-md-2 text-center px-0">
+              <a>ลำดับ</a>
             </div>
-
-              <!--row3--->
-              <div class="row text-dark mb-5 align-items-md-center">
-                <div class="col-md-1 text-right px-0 " >
-                  <a>ว/ด/ป&nbsp;เกิด&nbsp;:</a> 
-                </div>
-                <div class="col-md-3 " >
-                  <a>27/05/1999</a>
-                </div>
-                <div class="col-md-1 text-right px-0">
-                  <a>สัญชาติ&nbsp;:</a>
-                </div>
-                <div class="col-md-3 ">
-                  <a>ไทย</a>
-                </div>
-                <div class="col-md-1 text-right px-0 ">
-                  <a>เชื้อชาติ&nbsp;:</a>
-                </div>
-                <div class="col-md-3 " >
-                  <a>ไทย</a>
-                </div>
+            <div class="col-md-5 text-left px-0">
+              <a>ชื่อหัวข้อฝึกอบรม</a>
             </div>
-
-              <!----row4---->
-              <div class="row text-dark mb-5 align-items-md-center">
-                <div class="col-md-1 text-right px-0 " >
-                  <a>ศาสนา&nbsp;:</a> 
-                </div>
-                <div class="col-md-3 " >
-                  <a>อิสลาม</a>
-                </div>
-                <div class="col-md-1 text-right px-0">
-                  <a>หมู่โลหิต&nbsp;:</a>
-                </div>
-                <div class="col-md-3 ">
-                  <a>B</a>
-                </div>
-                <div class="col-md-1 text-right px-0 ">
-                  <a>อายุ&nbsp;:</a>
-                </div>
-                <div class="col-md-3 " >
-                  <a>21&nbsp;ปี</a>
-                </div>
+            <div class="col-md-5 text-left px-0">
+              <a>ชื่อสถาบัน</a>
             </div>
+          </div>
 
-              <!---row5--->
-              <div class="row text-dark mb-5 align-items-md-center">
-                <div class="col-md-1 text-right px-0 " >
-                  <a>โทรศัพท์บ้าน&nbsp;:</a> 
-                </div>
-                <div class="col-md-3 " >
-                  <a>029182907</a>
-                </div>
-                <div class="col-md-1 text-right px-0">
-                  <a>มือถือ&nbsp;:</a>
-                </div>
-                <div class="col-md-3 ">
-                  <a>0926044269</a>
-                </div>
-                <div class="col-md-1 text-right px-0 ">
-                  <a>ที่อยู่อีเมล&nbsp;:</a>
-                </div>
-                <div class="col-md-3 " >
-                  <a>rainbow.4227@gmail.com</a>
-                </div>
+          <!---row2---->
+          <div class="row text-dark align-items-md-center mb-3">
+            <div class="col-md-2 text-center fa-2x">
+              <a>1</a>
             </div>
-
-              <!----row6---->
-              <div class="row text-dark mb-5 align-items-md-center">
-                <div class="col-md-1 text-right px-0 " >
-                  <a>บัตรประชาชนเลขที่&nbsp;:</a> 
-                </div>
-                <div class="col-md-2 " >
-                  <a>1100702872218</a>
-                </div>
-                <div class="col-md-2 text-right px-0">
-                  <a>เลขบัญชีธนาคาร&nbsp;:</a>
-                </div>
-                <div class="col-md-3 ">
-                  <a>0078687800</a>
-                </div>
-                <div class="col-md-1 text-right px-0 ">
-                  <a>ธนาคาร&nbsp;:</a>
-                </div>
-                <div class="col-md-3 " >
-                  <a>กสิกร</a>
-                </div>
+            <div class="col-md-5 text-left pl-0 pr-5">
+              <input type="text" value="xxxx" class="border form-control rounded" > 
             </div>
-
-              <!------row7------>
-              <div class="row text-dark mb-5 align-items-md-center">
-                <div class="col-md-1 text-right px-0 " >
-                  <a>ชื่อบิดา&nbsp;:</a> 
-                </div>
-                <div class="col-md-3 " >
-                  <a>นายสหพัทธิ์&nbsp;เรืองสุวรรณ</a>
-                </div>
-                <div class="col-md-1 text-right px-0">
-                  <a>อาชีพ&nbsp;:</a>
-                </div>
-                <div class="col-md-3 ">
-                  <a>ธุรกิจส่วนตัว</a>
-                </div>
-                <div class="col-md-1 text-right px-0 ">
-                  <a>อายุ&nbsp;:</a>
-                </div>
-                <div class="col-md-3 " >
-                  <a>50&nbsp;ปี</a>
-                </div>
+            <div class="col-md-5 text-left pl-0 pr-5">
+              <input type="text" value="xxxxxxxxxx" class="border form-control rounded" > 
             </div>
+          </div>
 
-              <!------row8------>
-              <div class="row text-dark mb-5 align-items-md-center">
-                <div class="col-md-1 text-right px-0 " >
-                  <a>ชื่อมารดา&nbsp;:</a> 
-                </div>
-                <div class="col-md-3 " >
-                  <a>นางสุนันทา&nbsp;เรืองสุวรรณ</a>
-                </div>
-                <div class="col-md-1 text-right px-0">
-                  <a>อาชีพ&nbsp;:</a>
-                </div>
-                <div class="col-md-3 ">
-                  <a>ธุรกิจส่วนตัว</a>
-                </div>
-                <div class="col-md-1 text-right px-0 ">
-                  <a>อายุ&nbsp;:</a>
-                </div>
-                <div class="col-md-3 " >
-                  <a>44&nbsp;ปี</a>
-                </div>
+          <!---row3--->
+          <div class="row text-dark align-items-md-center mb-2">
+            <div class="col-md-2 px-0"></div>
+            <div class="col-md-5 text-left px-0">
+              <a>ปีการศึกษา</a>
             </div>
+            <div class="col-md-5 text-left px-0">
+              <a>วิชาที่ศึกษา/วุฒิที่ได้รับ</a>
+            </div>
+          </div>
+          
+          <!---row4---->
+          <div class="row text-dark align-items-md-center mb-3">
+            <div class="col-md-2 "></div>
+            <div class="col-md-5 text-left pl-0 pr-5">
+              <input type="text" value="xxxx" class="border form-control rounded" > 
+            </div>
+            <div class="col-md-5 text-left pl-0 pr-5">
+              <input type="text" value="xxxxxxxxxx" class="border form-control rounded" > 
+            </div>
+          </div>
 
-          </div><!--/card body--->
         </div>
-      </div>
-      </div>
-
-  <!-- รายละเอียดที่อยู่ปัจจุบัน-->
-  <div class="card accordion md-accordion mb-3" id="accordionEx" role="tablist" aria-multiselectable="true">
- <div class="card">
-  <div class="card-header py-4 "  style="background-color: #ADE3FB;" >
-    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne2" aria-expanded="true"
-      aria-controls="collapseOne2">
-      <h6 class="mb-0 text-dark mx-3" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-        รายละเอียดที่อยู่ปัจจุบัน<i class="fas fa-angle-down rotate-icon"></i>
-      </h6>
-    </a>
-  </div>
-  <div id="collapseOne2" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
-    <div class="card-body mt-4 pl-5">
-
-      <!---row1---->
-      <div class="row text-dark mb-5 align-items-md-center">
-        <div class="col-md-1 text-right px-0 " >
-          <a>บ้านเลขที่&nbsp;:</a> 
-        </div>
-        <div class="col-md-3 " >
-          <a>162/91</a>
-        </div>
-        <div class="col-md-1 text-right px-0">
-          <a>หมู่ที่&nbsp;:</a>
-        </div>
-        <div class="col-md-3 ">
-          <a>-</a>
-        </div>
-        <div class="col-md-1 text-right px-0 ">
-          <a>ซอย&nbsp;:</a>
-        </div>
-        <div class="col-md-3 " >
-          <a>4</a>
-        </div>
+        <!--/card-body--->
     </div>
 
-      <!---row2---->
-      <div class="row text-dark mb-5 align-items-md-center">
-        <div class="col-md-1 text-right px-0 " >
-          <a>อาคาร&nbsp;:</a> 
-        </div>
-        <div class="col-md-3 " >
-          <a>-</a>
-        </div>
-        <div class="col-md-1 text-right px-0">
-          <a>หมู่บ้าน&nbsp;:</a>
-        </div>
-        <div class="col-md-3 ">
-          <a>บ้านสวนร่มเกล้า-สุวรรณภูมิ</a>
-        </div>
-        <div class="col-md-1 text-right px-0 ">
-          <a>ถนน&nbsp;:</a>
-        </div>
-        <div class="col-md-3 " >
-          <a>ร่มเกล้า</a>
-        </div>
-    </div>
-
-      <!----row3----->
-      <div class="row text-dark mb-5 align-items-md-center">
-        <div class="col-md-1 text-right px-0 " >
-          <a>จังหวัด&nbsp;:</a> 
-        </div>
-        <div class="col-md-3 " >
-          <a>กรุงเทพมหานคร</a>
-        </div>
-        <div class="col-md-1 text-right px-0">
-          <a>อำเภอ/เขต&nbsp;:</a>
-        </div>
-        <div class="col-md-3 ">
-          <a>มีนบุรี</a>
-        </div>
-        <div class="col-md-1 text-right px-0 ">
-          <a>ตำบล/แขวง&nbsp;:</a>
-        </div>
-        <div class="col-md-3 " >
-          <a>มีนบุรี</a>
-        </div>
-    </div>
-
-      <!----row4----->
-      <div class="row text-dark mb-5 align-items-md-center">
-        <div class="text-left px-0 ">
-          <a>รหัสไปรษณีย์&nbsp;:</a> 
-        </div>
-        <div class="col-md-3 " >
-          <a>10510</a>
-        </div>
-        
-        
-    </div>
-
-
-    </div>
-  </div>
-</div>
-</div>
-
-<!-- รายละเอียดประวัติการศึกษา-->
-<div class="card accordion md-accordion mb-3" id="accordionEx" role="tablist" aria-multiselectable="true">
-<div class="card">
-  <div class="card-header py-4" style="background-color:  #ADE3FB;">
-    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne3" aria-expanded="true"
-      aria-controls="collapseOne3">
-      <h6 class="mb-0 text-dark mx-3" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-        รายละเอียดประวัติการศึกษา<i class="fas fa-angle-down rotate-icon"></i>
-      </h6>
-    </a>
-  </div>
-  <div id="collapseOne3" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
-    <div class="card-body mt-2">
-  
-      <!---row1---->
-      <div class="row text-dark align-items-md-center mb-2">
-        <div class="col-md-2 text-center px-0">
-          <a>ลำดับ</a>
-        </div>
-        <div class="col-md-2 text-left px-0">
-          <a>ปีการศึกษา</a>
-        </div>
-        <div class="col-md-3 text-left px-0">
-          <a>ระดับการศึกษา</a>
-        </div>
-        <div class="col-md-5 text-left px-0">
-          <a>ชื่อสถาบัน</a>
-        </div>
-      </div>
-
-      <!---row2---->
-      <div class="row text-dark align-items-md-center mb-3">
-        <div class="col-md-2 text-center fa-2x">
-          <a>1</a>
-        </div>
-        <div class="col-md-2 text-left pl-0 pr-5">
-          <a>XXXX</a>
-        </div>
-        <div class="col-md-3 text-left pl-0 pr-5">
-          <a>XXXXXXXX</a>
-        </div>
-        <div class="col-md-5 text-left pl-0 pr-5">
-          <a>XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</a>
-        </div>
-      </div>
-
-      <!---row3--->
-      <div class="row text-dark align-items-md-center mb-2">
-        <div class="col-md-2 px-0"></div>
-        <div class="col-md-5 text-left px-0">
-          <a>วิชาที่ศึกษา/วุฒิที่ได้รับ</a>
-        </div>
-        <div class="col-md-5 text-left px-0">
-          <a>วิชาเอก</a>
-        </div>
+    <!---adding card---->
+    <div class="card mt-3">
+      <div class="card-header text-right pb-0 pl-0 bg-white border-0">
+        <button type="button" class="close" data-dismiss="" aria-label="">
+          <span aria-hidden="true" class="text-danger">&times;</span>
+        </button>
       </div>
       
-      <!---row4---->
-      <div class="row text-dark align-items-md-center mb-3">
-        <div class="col-md-2 "></div>
-        <div class="col-md-5 text-left pl-0 pr-5">
-          <a>XXXXXXXXXXXXXXXXXXXXXX</a>
-        </div>
-        <div class="col-md-5 text-left pl-0 pr-5">
-          <a>XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</a>
-        </div>
-      </div>
+      <div class="card-body">
 
-    </div>
-    <!--/card-body--->
-  </div>
-</div>
-</div>
+        <!---row1---->
+        <div class="row text-dark align-items-md-center mb-2">
+          <div class="col-md-2 text-center px-0">
+            <a>ลำดับ</a>
+          </div>
+          <div class="col-md-5 text-left px-0">
+            <a>ชื่อหัวข้อฝึกอบรม</a>
+          </div>
+          <div class="col-md-5 text-left px-0">
+            <a>ชื่อสถาบัน</a>
+          </div>
+        </div>
 
-<!-- รายละเอียดประวัติการฝึกอบรม-->
-<div class="card accordion md-accordion mb-3" id="accordionEx" role="tablist" aria-multiselectable="true">
-<div class="card">
-  <div class="card-header py-4" style="background-color:  #ADE3FB;">
-    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne4" aria-expanded="true"
-      aria-controls="collapseOne4">
-      <h6 class="mb-0 text-dark mx-3" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-        รายละเอียดประวัติการฝึกอบรม<i class="fas fa-angle-down rotate-icon"></i>
-      </h6>
-    </a>
-  </div>
-  <div id="collapseOne4" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
-    <div class="card-body mt-2">
+        <!---row2---->
+        <div class="row text-dark align-items-md-center mb-3">
+          <div class="col-md-2 text-center fa-2x">
+            <a>2</a>
+          </div>
+          <div class="col-md-5 text-left pl-0 pr-5">
+            <input type="text" value="xxxx" class="border form-control rounded" > 
+          </div>
+          <div class="col-md-5 text-left pl-0 pr-5">
+            <input type="text" value="xxxxxxxxxx" class="border form-control rounded" > 
+          </div>
+        </div>
 
-      <!---row1---->
-      <div class="row text-dark align-items-md-center mb-2">
-        <div class="col-md-2 text-center px-0">
-          <a>ลำดับ</a>
+        <!---row3--->
+        <div class="row text-dark align-items-md-center mb-2">
+          <div class="col-md-2 px-0"></div>
+          <div class="col-md-5 text-left px-0">
+            <a>ปีการศึกษา</a>
+          </div>
+          <div class="col-md-5 text-left px-0">
+            <a>วิชาที่ศึกษา/วุฒิที่ได้รับ</a>
+          </div>
         </div>
-        <div class="col-md-5 text-left px-0">
-          <a>ชื่อหัวข้อฝึกอบรม</a>
-        </div>
-        <div class="col-md-5 text-left px-0">
-          <a>ชื่อสถาบัน</a>
-        </div>
-      </div>
-
-      <!---row2---->
-      <div class="row text-dark align-items-md-center mb-3">
-        <div class="col-md-2 text-center fa-2x">
-          <a>1</a>
-        </div>
-        <div class="col-md-5 text-left pl-0 pr-5">
-          <a>XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</a>
-        </div>
-        <div class="col-md-5 text-left pl-0 pr-5">
-          <a>XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</a>
-        </div>
-      </div>
-
-      <!---row3--->
-      <div class="row text-dark align-items-md-center mb-2">
-        <div class="col-md-2 px-0"></div>
-        <div class="col-md-5 text-left px-0">
-          <a>ปีการศึกษา</a>
-        </div>
-        <div class="col-md-5 text-left px-0">
-          <a>วิชาที่ศึกษา/วุฒิที่ได้รับ</a>
-        </div>
-      </div>
-      
-      <!---row4---->
-      <div class="row text-dark align-items-md-center mb-3">
-        <div class="col-md-2 "></div>
-        <div class="col-md-5 text-left pl-0 pr-5">
-          <a>XXXX</a>
-        </div>
-        <div class="col-md-5 text-left pl-0 pr-5">
-          <a>XXXXXXXXXXXXXXXXXXX</a> 
-        </div>
-      </div>
-
-    </div>
-    <!--/card-body--->
-  </div>
-</div>
-</div>
-
-
-
-<!-- รายละเอียดอาจารย์ที่ปรึกษา / บุคลากรทางการศึกษาที่สามารถติดต่อได้-->
-<div class="card accordion md-accordion mb-3" id="accordionEx" role="tablist" aria-multiselectable="true">
-<div class="card">
-  <div class="card-header py-4"  style="background-color: #ADE3FB;" >
-    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne6" aria-expanded="true"
-      aria-controls="collapseOne6">
-      <h6 class="mb-0 text-dark mx-3" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-        รายละเอียดอาจารย์ที่ปรึกษา&nbsp;/&nbsp;บุคลากรทางการศึกษาที่สามารถติดต่อได้<i class="fas fa-angle-down rotate-icon"></i>
-      </h6>
-    </a>
-  </div>
-  <div id="collapseOne6" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
-    <div class="card-body mt-2">
-      <!---row1---->
-    <div class="row text-dark align-items-md-center mb-2" >
-      <div class="col-md-2 text-center px-0 ">
-        <a>ลำดับ</a>
-      </div>
-      <div class="col-md-3 text-left px-0">
-        <a>ความสัมพันธ์</a>
-      </div>
-      <div class="col-md-2 text-left px-0">
-        <a>คำนำหน้า</a>
-      </div>
-      <div class="col-md-2 text-left px-0">
-        <a>ชื่อ</a>
-      </div>
-      <div class="col-md-3 text-left px-0">
-        <a>นามสกุล</a>
-      </div>
-    </div>
-
-    <!----row2--->
-    <div class="row text-dark align-items-md-center mb-3">
-      <div class="col-md-2 text-center fa-2x">
-        <a>1</a>
-      </div>
-      <div class="col-md-3 text-left pl-0 pr-3" >
-        <a>XXXXXXXXXX</a>
         
+        <!---row4---->
+        <div class="row text-dark align-items-md-center mb-3">
+          <div class="col-md-2 "></div>
+          <div class="col-md-5 text-left pl-0 pr-5">
+            <input type="text" value="xxxx" class="border form-control rounded" > 
+          </div>
+          <div class="col-md-5 text-left pl-0 pr-5">
+            <input type="text" value="xxxxxxxxxx" class="border form-control rounded" > 
+          </div>
+        </div>
+
       </div>
-      <div class="col-md-2 text-left pl-0 pr-4">
-        <a>XX.XX</a>
-      </div>
-      <div class="col-md-2 text-left pl-0 pr-3" >
-        <a>XXXXXXX</a>
-      </div>
-      <div class="col-md-3 text-left pl-0 pr-3" >
-        <a>XXXXXXXXXXXXXXX</a>
-      </div>
+      <!--/card-body--->
     </div>
-
-    <!---row3--->
-    <div class="row text-dark align-items-md-center mb-2" >
-      <div class="col-md-2 text-center px-0 ">
-        <a></a>
-      </div>
-      <div class="col-md-3 text-left px-0">
-        <a>ตำแหน่งงาน</a>
-      </div>
-      <div class="col-md-4 text-left px-0">
-        <a>ที่อยู่อีเมล</a>
-      </div>
-      <div class="col-md-3 text-left px-0">
-        <a>เบอร์มือถือ</a>
-      </div>
-    </div>
-
-    <!---row4---->
-    <div class="row text-dark align-items-md-center mb-3">
-      <div class="col-md-2 "></div>
-      <div class="col-md-3 text-left pl-0 pr-3">
-        <a>XXXXXXXXXXXXXXX</a>
-      </div>
-    <div class="col-md-4 text-left pl-0 pr-3">
-      <a>XXXXXXXXXXXXXXX</a>
-    </div>
-    
-    <div class="col-md-3 text-left pl-0 pr-3">
-      <a>XXXXXXXXXX</a>
-    </div>
-    </div>
-
-
-    </div>
-  </div>
-</div>
-</div>
-
-
-</div>
-<!----/collapse parts--->
-
+        
+ 
+       
    </form>
  
-   <!----buttons---->
- <div class="row justify-content-center mb-5">
-  <a href="index main.html">
-  <button class="btn btn-md btn-white rounded-lg " type="button">
+ <!----completed popup---->
+<div class="modal fade" id="completed" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-sm modal-dialog-centered " role="document">
+      <div class="modal-content rounded-lg pt-5 pb-2">
+        <div class="modal-body text-center font-weight-bolder pb-4" >
+          <h6 >บันทึกเรียบร้อย</h6>
+        </div>
+        <div class="modal-footer justify-content-center border-0 py-2">
+         <a href="index main.html"><button type="button" class="btn btn-rounded btn-sm btn-info">OK</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!----/completed popup---->
+  
+  <!----buttons---->
+  <div class="row justify-content-center mt-4 ">
+  <a href="index edit2.html">
+  <button class="btn btn-md btn-white rounded-lg mr-4 " type="button">
     <i class="fa fa-caret-left pr-2" aria-hidden="true"></i>
     กลับไป
   </button>
   </a>
-  
-</div>
-<!---/buttons---->
- 
-   
+  <button class="btn btn-md btn-success rounded-lg mx-4" type="button" data-toggle="modal" data-target="#completed">บันทึกการแก้ไข</button>
+  <a href="index edit4.html">
+  <button class="btn btn-md btn-white rounded-lg ml-4" type="button">
+    ถัดไป
+    <i class="fa fa-caret-right pl-2" aria-hidden="true"></i>
+  </button>
+  </a>
+  </div>
+  <!---/buttons---->
  
   </div><!---/container-fluid---->
  

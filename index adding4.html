@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="css/mdb.min.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
   
   
   <!----.CSS---->
@@ -626,12 +628,12 @@
           </div>
 
           <!----row2--->
-          <div class="row text-dark align-items-md-center mb-3">
+          <div class="row text-dark align-items-md-center ">
             <div class="col-md-2 text-center fa-2x">
               <a>1</a>
             </div>
             <div class="col-md-3 text-left pl-0 pr-3" style="display: inline-flex;">
-              <div class="dropdown pt-1 pb-2 border rounded" style="width: 230px;">
+              <div id="checkRelation" class="dropdown pt-1 pb-2 border rounded" style="width: 230px;">
                 <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   เลือก
                 </button>
@@ -644,16 +646,25 @@
               <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
             </div>
             <div class="col-md-2 text-left pl-0 pr-4">
-              <input type="text" class="border form-control rounded" > 
+              <input type="text"  class="border form-control rounded" > 
             </div>
             <div class="col-md-2 text-left pl-0 pr-3" style="display: inline-flex;">
-              <input type="text" class="border form-control rounded" >
+              <input type="text" id="checkName3" class="border form-control rounded" >
               <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
             </div>
             <div class="col-md-3 text-left pl-0 pr-3" style="display: inline-flex;">
-              <input type="text" class="border form-control rounded" >
+              <input type="text" id="checkSurname3" class="border form-control rounded" >
               <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
             </div>
+          </div>
+
+          <!--check row2-->
+          <div class="row mb-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-3 text-left pl-0 pr-3"><div id="showtextRelation"></div></div>
+            <div class="col-md-2 text-left pl-0 pr-4"></div>
+            <div class="col-md-2 text-left pl-0 pr-3"><div id="showtextName3"></div></div>
+            <div class="col-md-3 text-left pl-0 pr-3"><div id="showtextSurname3"></div></div>
           </div>
 
           <!---row3--->
@@ -673,20 +684,30 @@
           </div>
 
           <!---row4---->
-          <div class="row text-dark align-items-md-center mb-3">
+          <div class="row text-dark align-items-md-center ">
             <div class="col-md-2 "></div>
             <div class="col-md-3 text-left pl-0 pr-3">
-              <input type="text" class="border form-control rounded" style="width: 230px;" > 
+              <input type="text"  class="border form-control rounded" style="width: 230px;" > 
             </div>
-          <div class="col-md-4 text-left pl-0 pr-3"style="display: inline-flex;">
-            <input type="text" class="border form-control rounded" > 
-            <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+          <div class="col-md-4 text-left pl-0 pr-3" >
+            <input type="text" id="checkEmail2" class="border form-control rounded" style="width: 315px;"> 
+            
           </div>
           
           <div class="col-md-3 text-left pl-0 pr-3"style="display: inline-flex;">
-            <input type="text" class="border form-control rounded" > 
+            <input type="text" id="checkMobile2" class="border form-control rounded" > 
             <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
           </div>
+          </div>
+
+          <!--check row4-->
+          <div class="row mb-3">
+            <div class="col-md-2 "></div>
+            <div class="col-md-3 text-left pl-0 pr-3"></div>
+            <div class="col-md-4 text-left pl-0 pr-3"><div id="showtextEmail2"></div></div>
+            <div class="col-md-3 text-left pl-0 pr-3"><div id="showtextMobile2"></div></div>
+
+
           </div>
 
 
@@ -775,9 +796,9 @@
         <div class="col-md-3 text-left pl-0 pr-3">
           <input type="text" class="border form-control rounded" style="width: 230px;" > 
         </div>
-      <div class="col-md-4 text-left pl-0 pr-3"style="display: inline-flex;">
-        <input type="text" class="border form-control rounded" > 
-        <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+      <div class="col-md-4 text-left pl-0 pr-3">
+        <input type="text" class="border form-control rounded" style="width: 315px;"> 
+        
       </div>
       
       <div class="col-md-3 text-left pl-0 pr-3"style="display: inline-flex;">
@@ -817,7 +838,8 @@
       กลับไป
     </button>
     </a>
-    <button class="btn btn-md btn-success rounded-lg ml-4" type="button" data-toggle="modal" data-target="#completed">&nbsp;&nbsp;&nbsp;บันทึก&nbsp;&nbsp;&nbsp;</button>
+    <a data-toggle="modal" data-target="#completed">
+    <button class="btn btn-md btn-success rounded-lg ml-4" type="button"  id="submit4">&nbsp;&nbsp;&nbsp;บันทึก&nbsp;&nbsp;&nbsp;</button></a>
   </div>
   <!---/buttons---->
    
@@ -835,16 +857,15 @@
 </footer>
 
 
-  <!-- jQuery -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
+  
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
+  <!-- Validation -->
+  <script type="text/javascript" src="js/validation.js"></script>
   
 </body>
 </html>

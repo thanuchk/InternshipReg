@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Info Adding - ประวัติการศึกษา</title>
+    <title>Info Editing - แก้ไขประวัติส่วนตัวเเละที่อยู่</title>
     <!-- MDB icon -->
     <!-- <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon"> -->
     <!-- Font Awesome -->
@@ -13,15 +13,13 @@
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <!---Google fonts Prompt---->
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="css/mdb.min.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- jQuery -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
   
   
   <!----.CSS---->
@@ -37,10 +35,11 @@
   <link rel="stylesheet" href="css main/coremain.css">
   <link rel="stylesheet" href="css main/timegridmain.css">
 
+  <script type="text/javascript" src="js/mdb-select.js"></script>
 
 </head>
 
-<body class="fixed-sn white-skin" style="font-family: 'Prompt', sans-serif;">
+<body class="fixed-sn white-skin" style="font-family: 'Prompt', sans-serif;" >
   <div id="overlay" class="hide-overlay">
     <div id="floatingBarsG">
       <div class="blockG" id="rotateG_01"></div>
@@ -574,216 +573,543 @@
 </header>
 
 <main>
-  <div class="container-fluid">
-         <ol class="breadcrumb bg-white">
-           <li class="breadcrumb-item"><a href="#!" class="badge badge-pill indigo mt-1">IT002</a></li>
-           <li class="breadcrumb-item ">ระบบข้อมูลนักศึกษาฝึกงาน</li>
-           <li class="breadcrumb-item ">ทะเบียนข้อมูลนักศึกษาฝึกงาน</li>
-         </ol>
- 
-         <br>
-     
+
+  <div class="container-fluid ">
+
+    <ol class="breadcrumb bg-white">
+      <li class="breadcrumb-item"><a href="#!" class="badge badge-pill indigo mt-1">IT001</a></li>
+        <li class="breadcrumb-item ">ระบบข้อมูลนักศึกษาฝึกงาน</li>
+        <li class="breadcrumb-item ">ทะเบียนข้อมูลนักศึกษาฝึกงาน</li>
+    </ol>
+
+    <br>
+
+
+
+<form name="WKM001" method="post" action="/uat/km/personalBlog.do" onsubmit="_submit_NestedForm(this)">
+
+<input type="hidden" name="cmd" value="">
+<input type="hidden" name="id" value="">
+
+<div class="card card-cascade narrower">
+<!----topic---->
+<div class="row">
+  <div class="col-md-5">
+    <div class="view view-cascade gradient-card-header blue-gradient">
+      <h6 class="h6-responsive mb-0">แก้ไขรายละเอียดการสมัคร</h6>
+    </div>
+  </div>
+</div>
+<!---/topic---->
+
+<div class="card-body card-body-cascade mt-5 pb-5 mx-4" >
+  <!----1st row---->
+  <div class="form-group row mb-5 align-items-md-center">
+    <div class="col-md-2 text-right px-0">
+      <a>ประเภทการฝึกงาน&nbsp;:</a>
+    </div>
+    <div class="col-md-4">
+      <div class="dropdown pt-1 pb-2 border rounded" style="width: 286px;">
+        <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          เลือก
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item">ฝึกงาน</a>
+          <a class="dropdown-item">สหกิจ</a>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col-md-2 text-right px-0">
+      <a>ตำแหน่ง&nbsp;:</a>
+    </div>
+    <div class="col-md-4" style="display: inline-flex;">
+      <div class="dropdown pt-1 pb-2 border rounded" style="width: 290px;">
+        <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ทั้งหมด
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" >Java Developer</a>
+          <a class="dropdown-item" >Frontend</a>
+          <a class="dropdown-item" >Data Scientist</a>
+          <a class="dropdown-item" >System Analysis</a>
+          
+        </div>
+      </div>
+      <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+    </div>
+    
+  </div>
+
+  <!----2nd row---->
+  <div class="form-group row mb-5 align-items-md-center">
+    <div class="col-md-2 text-right px-0 ">
+      <a class="">วันที่เริ่ม&nbsp;:</a>
+    </div>
+    <div class="col-md-4" style="display: inline-flex;">
+      <input type="date"  class="form-control border">
+      <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+    </div>
+    <div class="col-md-2 text-right px-0">
+      <a class="">วันที่สิ้นสุด&nbsp;:</a>
+    </div>
+    <div class="col-md-4" style="display: inline-flex;">
+      <input type="date" class="form-control border">
+      <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+    </div>
+  </div>
+
+  <!----3rd row---->
+  <div class="form-group row mb-0 align-items-md-center">
+    <div class="col-md-2  text-right px-0">
+      <a class="">รวมเวลา&nbsp;:</a>
+    </div>
+    <div class="col-md-4">
+      <a>60</a> วัน
+    </div>
+    <div class="col-md-2  text-right px-0">
+      <a class="">สาขาที่ฝึกงาน&nbsp;:</a>
+    </div>
+    <div class="col-md-4" style="display: inline-flex;">
+      <div class="dropdown pt-1 pb-2 border rounded" style="width: 290px;">
+        <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ทั้งหมด
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" >เชียงใหม่</a>
+        </div>
+      </div>
+      <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+    </div>
+
+  </div>
+
+
+  
+</div>
+</div>
+
+<!---collapse parts--->
+<div class="my-0   ">
+    <!-- รายละเอียดประวัติส่วนตัว-->
+    <div class="card">
+        <div class="card ">
+          <div class="card-header py-4" role="tab" id="headingOne1" style="background-color: #ADE3FB;" >
+           
+              <h6 class="mb-0 text-dark mx-3" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                รายละเอียดประวัติส่วนตัว
+              </h6>
+           
+          </div>
         
-   <form name="WKM001" method="post" action="/uat/km/personalBlog.do" onsubmit="_submit_NestedForm(this)">
-     <input type="hidden" name="cmd" value="">
-     <input type="hidden" name="id" value="">
-     
+            <div class="card-body ml-3">
+              <!----row1----->
+                <div class="row text-dark mb-5 align-items-md-center">
+                    <div class="col-md-1 text-right px-0 " >
+                      <a>ชื่อ&nbsp;:</a>
+                    </div>
+                    <div class="col-md-3 " style="display: inline-flex;">
+                      <input type="text"  value="นางสาวสิริกร" class="border form-control rounded">   
+                      <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-1 text-right px-0">
+                      <a>นามสกุล&nbsp;:</a>
+                    </div>
+                    <div class="col-md-3 " style="display: inline-flex;">
+                      <input type="text" value="เรืองสุวรรณ" class="border form-control rounded">
+                      <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-1 text-right px-0 ">
+                      <a>เพศ&nbsp;:</a>
+                    </div>
+                    <div class="col-md-3 " >
+                      <div class="dropdown pt-1 pb-2 border rounded" style="width: 215px;">
+                        <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          เลือก
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" >ชาย</a>
+                          <a class="dropdown-item" >หญิง</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
 
-     <!-- รายละเอียดประวัติการศึกษา-->
-        <div class="card">
-            <div class="card-header row mx-0 align-items-md-center" style="background-color:  #ADE3FB;">
-                <div class="col-md-4" >
-                  <h6 class="mb-0 text-dark " style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">รายละเอียดประวัติการศึกษา</h6>
-                </div>
-                  <div class="col-md-8 text-right  px-0">
-                        <button type="button" class="btn btn-md rounded waves-effect waves-light" 
-                        style="border: 1px solid #FFFFFF;
-                        color: white;
-                        box-sizing: border-box;
-                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                        background: #00C851;
-                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                        <i class="fa fa-plus mr-1" aria-hidden="true"></i>
-                        <a>เพิ่มประวัติการศึกษา</a>
-                      </button>      
+                <!---row2--->
+                <div class="row mb-5 text-dark align-items-md-center">
+                  <div class="col-md-1  text-right px-0">
+                    <a>Name&nbsp;:</a>
                   </div>
+                  <div class="col-md-3" style="display: inline-flex;">
+                    <input type="text" value="Sirikorn" class="border form-control rounded">
+                    <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
                   </div>
-         
-            <div class="card-body">
-  
-              <!---row1---->
-              <div class="row text-dark align-items-md-center mb-2">
-                <div class="col-md-2 text-center px-0">
-                  <a>ลำดับ</a>
+                  <div class="col-md-1  text-right px-0">
+                    <a>Surname&nbsp;:</a>
+                  </div>
+                  <div class="col-md-3" style="display: inline-flex;">
+                    <input type="text" value="Ruengsuwan" class="border form-control rounded">
+                    <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-md-1 text-right px-0">
+                    <a>ชื่อเล่น&nbsp;:</a>
+                  </div>
+                  <div class="col-md-3">
+                    <input type="text" value="มินนี่" class="border form-control rounded" style="width: 215px;">
+                  </div>
                 </div>
-                <div class="col-md-2 text-left px-0">
-                  <a>ปีการศึกษา</a>
-                </div>
-                <div class="col-md-3 text-left px-0">
-                  <a>ระดับการศึกษา</a>
-                </div>
-                <div class="col-md-5 text-left px-0">
-                  <a>ชื่อสถาบัน</a>
-                </div>
-              </div>
 
-  
-              <!---row2---->
-              <div class="row text-dark align-items-md-center mb-3">
-                <div class="col-md-2 text-center fa-2x">
-                  <a>1</a>
+                <!--row3--->
+                <div class="row mb-5 text-dark align-items-md-center">
+                    <div class="col-md-1 text-right px-0">
+                      <a>ว/ด/ป&nbsp;เกิด&nbsp;:</a>
+                    </div>
+                    <div class="col-md-3" style="display: inline-flex;">
+                      <input type="text" value="27/05/2542" class="border form-control rounded">
+                    <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-1 text-right px-0">
+                      <a>สัญชาติ&nbsp;:</a>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="dropdown pt-1 pb-2 border rounded" style="width: 215px;">
+                        <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         เลือก
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" >ไทย</a>
+                          <a class="dropdown-item" >อินเดีย</a>
+                          <a class="dropdown-item" >อังกฤษ</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-1 text-right px-0">
+                      <a>เชื้อชาติ&nbsp;:</a>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="dropdown pt-1 pb-2 border rounded" style="width: 215px;">
+                        <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         เลือก
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" >ไทย</a>
+                          <a class="dropdown-item" >อินเดีย</a>
+                          <a class="dropdown-item" >อังกฤษ</a>
+                        </div>
+                      </div>
+                    </div>
                 </div>
-                <div class="col-md-2 text-left pl-0 pr-5">
-                  <input type="text"  class="border form-control rounded" > 
-                </div>
-                <div class="col-md-3 text-left pl-0 pr-5">
-                  <div  class="dropdown pt-1 pb-2 border rounded" >
-                    <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     เลือก
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" >มัธยมศึกษา</a>
-                      <a class="dropdown-item" >ปวช.</a>
-                      <a class="dropdown-item" >ปวส.</a>
-                      <a class="dropdown-item" >ปริญญาตรี</a>
+
+                <!----row4---->
+                <div class="row mb-5 text-dark align-items-md-center">
+                  <div class="col-md-1 text-right px-0">
+                    <a>ศาสนา&nbsp;:</a>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="dropdown pt-1 pb-2 border rounded" style="width: 215px;">
+                      <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       เลือก
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" >พุทธ</a>
+                        <a class="dropdown-item" >อิสลาม</a>
+                        <a class="dropdown-item" >คริสตร์</a>
+                        <a class="dropdown-item" >ฮินดู</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-md-5 text-left pl-0 pr-5">
-                  <input type="text"  class="border form-control rounded" > 
-                </div>
-              </div>
-
-
-              <!---row3--->
-              <div class="row text-dark align-items-md-center mb-2">
-                <div class="col-md-2 px-0"></div>
-                <div class="col-md-5 text-left px-0">
-                  <a>วิชาที่ศึกษา/วุฒิที่ได้รับ</a>
-                </div>
-                <div class="col-md-5 text-left px-0">
-                  <a>วิชาเอก</a>
-                </div>
-              </div>
-              
-              <!---row4---->
-              <div class="row text-dark align-items-md-center mb-3">
-                <div class="col-md-2 "></div>
-                <div class="col-md-5 text-left pl-0 pr-5">
-                  <input type="text" class="border form-control rounded" > 
-                </div>
-                <div class="col-md-5 text-left pl-0 pr-5">
-                  <input type="text" class="border form-control rounded" > 
-                </div>
-              </div>
-
-            </div>
-            <!--/card-body--->
-        </div>
-
-        
-
-        <!---adding card---->
-        <div class="card mt-3">
-          <div class="card-header text-right pb-0 pl-0 bg-white border-0">
-            <button type="button" class="close" data-dismiss="" aria-label="">
-              <span aria-hidden="true" class="text-danger">&times;</span>
-            </button>
-          </div>
-          <div class="card-body">
-  
-            <!---row1---->
-            <div class="row text-dark align-items-md-center mb-2">
-              <div class="col-md-2 text-center px-0">
-                <a>ลำดับ</a>
-              </div>
-              <div class="col-md-2 text-left px-0">
-                <a>ปีการศึกษา</a>
-              </div>
-              <div class="col-md-3 text-left px-0">
-                <a>ระดับการศึกษา</a>
-              </div>
-              <div class="col-md-5 text-left px-0">
-                <a>ชื่อสถาบัน</a>
-              </div>
-            </div>
-
-            <!---row2---->
-            <div class="row text-dark align-items-md-center mb-3">
-              <div class="col-md-2 text-center fa-2x">
-                <a>2</a>
-              </div>
-              <div class="col-md-2 text-left pl-0 pr-5">
-                <input type="text" class="border form-control rounded" > 
-              </div>
-              <div class="col-md-3 text-left pl-0 pr-5">
-                <div class="dropdown pt-1 pb-2 border rounded" >
-                  <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   เลือก
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" >มัธยมศึกษา</a>
-                    <a class="dropdown-item" >ปวช.</a>
-                    <a class="dropdown-item" >ปวส.</a>
-                    <a class="dropdown-item" >ปริญญาตรี</a>
+                  <div class="col-md-1 text-right px-0">
+                    <a>หมู่โลหิต&nbsp;:</a>
+                  </div>
+                  <div class="col-md-3">
+                    <input type="text" value="B" class="border form-control rounded" style="width: 215px;">
+                  </div>
+                  <div class="col-md-1  text-right px-0">
+                    <a class="">อายุ&nbsp;:</a>
+                  </div>
+                  <div class="col-md-3">
+                    <a>21</a> ปี
                   </div>
                 </div>
-              </div>
-              <div class="col-md-5 text-left pl-0 pr-5">
-                <input type="text" class="border form-control rounded" > 
-              </div>
-            </div>
 
-            <!---row3--->
-            <div class="row text-dark align-items-md-center mb-2">
-              <div class="col-md-2 px-0"></div>
-              <div class="col-md-5 text-left px-0">
-                <a>วิชาที่ศึกษา/วุฒิที่ได้รับ</a>
-              </div>
-              <div class="col-md-5 text-left px-0">
-                <a>วิชาเอก</a>
-              </div>
-            </div>
-            
-            <!---row4---->
-            <div class="row text-dark align-items-md-center mb-3">
-              <div class="col-md-2 "></div>
-              <div class="col-md-5 text-left pl-0 pr-5">
-                <input type="text" class="border form-control rounded" > 
-              </div>
-              <div class="col-md-5 text-left pl-0 pr-5">
-                <input type="text" class="border form-control rounded" > 
-              </div>
-            </div>
+                <!---row5--->
+                <div class="row mb-5 text-dark align-items-md-center">
+                  <div class=" text-right px-0">
+                    <a>โทรศัพท์บ้าน&nbsp;:</a>
+                  </div>
+                  <div class="col-md-3">
+                      <input type="text" value="029182907" class="border form-control rounded" style="width: 215px;">                       
+                  </div>
+                  <div class="col-md-1 text-right px-0 " >
+                    <a>มือถือ&nbsp;:</a>
+                  </div>
+                  <div class="col-md-3 " style="display: inline-flex;">
+                    <input type="text" value="0926044269" class="border form-control rounded">
+                    <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-md-1 text-right px-0 " >
+                    <a>ที่อยู่อีเมล&nbsp;:</a>
+                  </div>
+                  <div class="ml-3" style="display: inline-flex;">
+                    <input type="text" value="rainbow.4227@hotmail.com" class="border form-control rounded" style="width: 208px;">
+                    <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                  </div>
+                </div>
 
-          </div>
-          <!--/card-body--->
+                <!----row6---->
+                <div class="row mb-5 text-dark align-items-md-center">
+                  
+                    <a>บัตรประชาชนเลขที่&nbsp;:</a>
+                  
+                  <div class="ml-3"  style="display: inline-flex;">
+                    <input type="text" value="1100702872218" class="border form-control rounded" style="width: 170px;">
+                    <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-md-1  text-right px-0 ml-3">
+                    <a class="">ธนาคาร&nbsp;:</a>
+                  </div>
+                  <div class="ml-3" style="display: inline-flex;">
+                    <div class="dropdown pt-1 pb-2 border rounded" style="width: 208px;">
+                      <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        เลือก
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" >ธนาคารกรุงเทพ</a>
+                        <a class="dropdown-item" >ธนาคารกสิกรไทย</a>
+                        <a class="dropdown-item" >ธนาคารกรุงไทย</a>
+                        <a class="dropdown-item" >ธนาคารทหารไทย</a>
+                        <a class="dropdown-item" >ธนาคารไทยพาณิชย์</a>
+                        <a class="dropdown-item" >ธนาคารกรุงศรีอยุธยา</a>
+                        <a class="dropdown-item" >ธนาคารธนชาติ</a>
+                        <a class="dropdown-item" >ธนาคารยูโอบี</a>
+                        <a class="dropdown-item" >ธนาคารออมสิน</a>
+                      </div>
+                    </div>
+                    <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                  </div>
+                  
+                    <a>เลขบัญชีธนาคาร&nbsp;:</a>
+                  
+                  <div class="ml-3 " style="display: inline-flex;">
+                    <input type="text" value="0078687800" class="border form-control rounded" style="width: 194px;">
+                    <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                  </div>
+                  
+                </div>
+
+                <!------row7------>
+                <div class="row mb-5 text-dark align-items-md-center">
+                  <div class="col-md-1 text-right px-0">
+                    <a>ชื่อบิดา&nbsp;:</a>
+                  </div>
+                  <div class="col-md-3">
+                    <input type="text" value="นายสหพัทธิ์ เรืองสุวรรณ" class="border form-control rounded" style="width: 215px;">                       
+                </div>
+                <div class="col-md-1 text-right px-0">
+                  <a>อาชีพ&nbsp;:</a>
+                </div>
+                <div class="col-md-3">
+                  <input type="text" value="ธุรกิจส่วนตัว" class="border form-control rounded" style="width: 215px;">                       
+                </div>
+                <div class="col-md-1 text-right px-0">
+                  <a>อายุ&nbsp;:</a>
+                </div>
+                <div class="col-md-3">
+                  <input type="text" value="50 ปี" class="border form-control rounded" style="width: 215px;">                       
+                </div>
+                </div>
+
+                <!------row8------>
+                <div class="row mb-4 text-dark align-items-md-center">
+                  <div class="col-md-1 text-right px-0">
+                    <a>ชื่อมารดา&nbsp;:</a>
+                  </div>
+                  <div class="col-md-3">
+                    <input type="text" value="นางสุนันทา เรืองสุวรรณ" class="border form-control rounded" style="width: 215px;">                       
+                </div>
+                <div class="col-md-1 text-right px-0">
+                  <a>อาชีพ&nbsp;:</a>
+                </div>
+                <div class="col-md-3">
+                  <input type="text" value="ธุรกิจส่วนตัว" class="border form-control rounded" style="width: 215px;">                       
+                </div>
+                <div class="col-md-1 text-right px-0">
+                  <a>อายุ&nbsp;:</a>
+                </div>
+                <div class="col-md-3">
+                  <input type="text" value="44 ปี" class="border form-control rounded" style="width: 215px;">                       
+                </div>
+                </div>
+            </div><!--/card body--->
+        
         </div>
- 
-       
-   </form>
- 
- <!----buttons---->
- <div class="row justify-content-center mt-4 ">
-    <a href="index adding1.html">
-    <button class="btn btn-md btn-white rounded-lg mr-4 " type="button">
-      <i class="fa fa-caret-left pr-2" aria-hidden="true"></i>
-      กลับไป
-    </button>
-    </a>
-    <a href="index adding3.html">
-    <button  class="btn btn-md btn-white rounded-lg ml-4" type="button">
-      ถัดไป
-      <i class="fa fa-caret-right pl-2" aria-hidden="true"></i>
-    </button>
-    </a>
+        </div>
+  
+    <!-- รายละเอียดที่อยู่-->
+  
+   <div class="card">
+    <div class="card-header py-4 " role="tab" id="headingOne1" style="background-color: #ADE3FB;" >
+        <h6 class="mb-0 text-dark mx-3" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+          รายละเอียดที่อยู่
+        </h6>
+    </div>
+    
+      <div class="card-body ml-3">
+
+        <!---row1---->
+        <div class="row mb-5 text-dark align-items-md-center">
+          <div class="col-md-1 text-right px-0">
+            <a>บ้านเลขที่&nbsp;:</a>
+          </div>
+          <div class="col-md-3">
+            <input type="text" value="162/91" class="border form-control rounded" >   
+          </div>
+          <div class="col-md-1 text-right px-0">
+            <a>หมู่ที่&nbsp;:</a>
+          </div>
+          <div class="col-md-3">
+            <input type="text" value="-" class="border form-control rounded" >   
+          </div>
+          <div class="col-md-1 text-right px-0">
+            <a>ซอย&nbsp;:</a>
+          </div>
+          <div class="col-md-3">
+            <input type="text" value="4" class="border form-control rounded" >   
+          </div>
+        </div>
+
+        <!---row2---->
+        <div class="row mb-5 text-dark align-items-md-center">
+          <div class="col-md-1 text-right px-0">
+            <a>อาคาร&nbsp;:</a>
+          </div>
+          <div class="col-md-3">
+            <input type="text" value="-" class="border form-control rounded" >   
+          </div>
+          <div class="col-md-1 text-right px-0">
+            <a>หมู่บ้าน&nbsp;:</a>
+          </div>
+          <div class="col-md-3">
+            <input type="text" value="บ้านสวนร่มเกล้า - สุวรรณภูมิ" class="border form-control rounded" >   
+          </div>
+          <div class="col-md-1 text-right px-0">
+            <a>ถนน&nbsp;:</a>
+          </div>
+          <div class="col-md-3">
+            <input type="text" value="ร่มเกล้า" class="border form-control rounded" >   
+          </div>
+        </div>
+
+        <!----row3----->
+        <div class="row mb-5 text-dark align-items-md-center">
+          <div class="col-md-1 text-right px-0">
+            <a>จังหวัด&nbsp;:</a>
+          </div>
+          <div class="col-md-3">
+            <div class="dropdown pt-1 pb-2 border rounded" style="width: 235px;">
+              <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               เลือก
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" >กรุงเทพมหานคร</a>
+                <a class="dropdown-item" >เชียงใหม่</a>
+                <a class="dropdown-item" >ภูเก็ต</a>
+                <a class="dropdown-item" >ขอนแก่น</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1 text-right px-0">
+            <a>อำเภอ/เขต&nbsp;:</a>
+          </div>
+          <div class="col-md-3">
+            <div class="dropdown pt-1 pb-2 border rounded" style="width: 235px;">
+              <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               เลือก
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" >ตลิ่งชัน</a>
+                <a class="dropdown-item" >มีนบุรี</a>
+                <a class="dropdown-item" >สะพานสูง</a>
+                <a class="dropdown-item" >ลาดกระบัง</a>
+              </div>
+            </div>
+          </div> 
+          <div class=" text-right px-0">
+            <a>ตำบล/แขวง&nbsp;:</a>
+          </div>
+          <div class="ml-3">
+            <div class="dropdown pt-1 pb-2 border rounded" style="width: 212px;">
+              <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               เลือก
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" >ฉิมพลี</a>
+                <a class="dropdown-item" >มีนบุรี</a>
+                <a class="dropdown-item" >สะพานสูง</a>
+                <a class="dropdown-item" >ลาดกระบัง</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!----row4----->
+        <div class="row mb-4 text-dark align-items-md-center">
+          
+            <a>รหัสไปรษณีย์&nbsp;:</a>
+          
+          <div class="col-md-3 px-2">
+            <input type="text" value="10510" class="border form-control rounded" style="width: 215px;" >   
+          </div>
+          
+        </div>
+      </div>
   </div>
-  <!---/buttons---->
-   
- 
-  </div><!---/container-fluid---->
- 
- </main>
+</div>
+<!----/collapse parts--->
+
+</form>
+
+
+
+<!----completed popup---->
+<div class="modal fade" id="completed" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-sm modal-dialog-centered " role="document">
+    <div class="modal-content rounded-lg pt-5 pb-2">
+      <div class="modal-body text-center font-weight-bolder pb-4" >
+        <h6 >บันทึกเรียบร้อย</h6>
+      </div>
+      <div class="modal-footer justify-content-center border-0 py-2">
+       <a href="index main.html"><button type="button" class="btn btn-rounded btn-sm btn-info">OK</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!----/completed popup---->
+
+<!----buttons---->
+<div class="row justify-content-center mt-4 ">
+<a href="index main.html">
+<button class="btn btn-md btn-white rounded-lg mr-4 " type="button">
+  <i class="fa fa-caret-left pr-2" aria-hidden="true"></i>
+  กลับไป
+</button>
+</a>
+<button class="btn btn-md btn-success rounded-lg mx-4" type="button" data-toggle="modal" data-target="#completed">บันทึกการแก้ไข</button>
+<a href="index edit2.html">
+<button class="btn btn-md btn-white rounded-lg ml-4" type="button">
+  ถัดไป
+  <i class="fa fa-caret-right pl-2" aria-hidden="true"></i>
+</button>
+</a>
+</div>
+<!---/buttons---->
+
+  </div> 
+  <!---/container-fluid------>
+
+
+
+</main>
 
  <footer class="page-footer text-center font-small primary-color-dark darken-2 mt-4 wow fadeIn">
   <!--Copyright-->
@@ -794,15 +1120,16 @@
 </footer>
 
 
-  
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Validation  -->
-  <script type="text/javascript" src="js/validation.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
   
 </body>
 </html>

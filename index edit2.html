@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Info Adding - ประวัติการศึกษา</title>
+    <title>Info Editing - แก้ไขประวัติการศึกษา</title>
     <!-- MDB icon -->
     <!-- <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon"> -->
     <!-- Font Awesome -->
@@ -13,15 +13,13 @@
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <!---Google fonts Prompt---->
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="css/mdb.min.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- jQuery -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
   
   
   <!----.CSS---->
@@ -36,8 +34,6 @@
   <link rel="stylesheet" href="css main/daygridmain.css">
   <link rel="stylesheet" href="css main/coremain.css">
   <link rel="stylesheet" href="css main/timegridmain.css">
-
-
 </head>
 
 <body class="fixed-sn white-skin" style="font-family: 'Prompt', sans-serif;">
@@ -626,7 +622,6 @@
                   <a>ชื่อสถาบัน</a>
                 </div>
               </div>
-
   
               <!---row2---->
               <div class="row text-dark align-items-md-center mb-3">
@@ -634,10 +629,10 @@
                   <a>1</a>
                 </div>
                 <div class="col-md-2 text-left pl-0 pr-5">
-                  <input type="text"  class="border form-control rounded" > 
+                  <input type="text" value="2563" class="border form-control rounded" > 
                 </div>
                 <div class="col-md-3 text-left pl-0 pr-5">
-                  <div  class="dropdown pt-1 pb-2 border rounded" >
+                  <div class="dropdown pt-1 pb-2 border rounded" >
                     <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                      เลือก
                     </button>
@@ -650,10 +645,9 @@
                   </div>
                 </div>
                 <div class="col-md-5 text-left pl-0 pr-5">
-                  <input type="text"  class="border form-control rounded" > 
+                  <input type="text" value="สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง" class="border form-control rounded" > 
                 </div>
               </div>
-
 
               <!---row3--->
               <div class="row text-dark align-items-md-center mb-2">
@@ -670,10 +664,10 @@
               <div class="row text-dark align-items-md-center mb-3">
                 <div class="col-md-2 "></div>
                 <div class="col-md-5 text-left pl-0 pr-5">
-                  <input type="text" class="border form-control rounded" > 
+                  <input type="text" value="xxxxxxxxxx" class="border form-control rounded" > 
                 </div>
                 <div class="col-md-5 text-left pl-0 pr-5">
-                  <input type="text" class="border form-control rounded" > 
+                  <input type="text" value="xxxxxxxxxx" class="border form-control rounded" > 
                 </div>
               </div>
 
@@ -714,7 +708,7 @@
                 <a>2</a>
               </div>
               <div class="col-md-2 text-left pl-0 pr-5">
-                <input type="text" class="border form-control rounded" > 
+                <input type="text" value="2558" class="border form-control rounded" > 
               </div>
               <div class="col-md-3 text-left pl-0 pr-5">
                 <div class="dropdown pt-1 pb-2 border rounded" >
@@ -730,7 +724,7 @@
                 </div>
               </div>
               <div class="col-md-5 text-left pl-0 pr-5">
-                <input type="text" class="border form-control rounded" > 
+                <input type="text" value="โรงเรียนภูเก็ตวิทยาลัย" class="border form-control rounded" > 
               </div>
             </div>
 
@@ -749,10 +743,10 @@
             <div class="row text-dark align-items-md-center mb-3">
               <div class="col-md-2 "></div>
               <div class="col-md-5 text-left pl-0 pr-5">
-                <input type="text" class="border form-control rounded" > 
+                <input type="text" value="xxxxxxxxxx" class="border form-control rounded" > 
               </div>
               <div class="col-md-5 text-left pl-0 pr-5">
-                <input type="text" class="border form-control rounded" > 
+                <input type="text" value="xxxxxxxxxx" class="border form-control rounded" > 
               </div>
             </div>
 
@@ -763,22 +757,39 @@
        
    </form>
  
- <!----buttons---->
- <div class="row justify-content-center mt-4 ">
-    <a href="index adding1.html">
-    <button class="btn btn-md btn-white rounded-lg mr-4 " type="button">
-      <i class="fa fa-caret-left pr-2" aria-hidden="true"></i>
-      กลับไป
-    </button>
-    </a>
-    <a href="index adding3.html">
-    <button  class="btn btn-md btn-white rounded-lg ml-4" type="button">
-      ถัดไป
-      <i class="fa fa-caret-right pl-2" aria-hidden="true"></i>
-    </button>
-    </a>
+ <!----completed popup---->
+<div class="modal fade" id="completed" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-sm modal-dialog-centered " role="document">
+      <div class="modal-content rounded-lg pt-5 pb-2">
+        <div class="modal-body text-center font-weight-bolder pb-4" >
+          <h6 >บันทึกเรียบร้อย</h6>
+        </div>
+        <div class="modal-footer justify-content-center border-0 py-2">
+         <a href="index main.html"><button type="button" class="btn btn-rounded btn-sm btn-info">OK</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!----/completed popup---->
+  
+  <!----buttons---->
+  <div class="row justify-content-center mt-4 ">
+  <a href="index edit1.html">
+  <button class="btn btn-md btn-white rounded-lg mr-4 " type="button">
+    <i class="fa fa-caret-left pr-2" aria-hidden="true"></i>
+    กลับไป
+  </button>
+  </a>
+  <button class="btn btn-md btn-success rounded-lg mx-4" type="button" data-toggle="modal" data-target="#completed">บันทึกการแก้ไข</button>
+  <a href="index edit3.html">
+  <button class="btn btn-md btn-white rounded-lg ml-4" type="button">
+    ถัดไป
+    <i class="fa fa-caret-right pl-2" aria-hidden="true"></i>
+  </button>
+  </a>
   </div>
   <!---/buttons---->
+  
    
  
   </div><!---/container-fluid---->
@@ -788,21 +799,22 @@
  <footer class="page-footer text-center font-small primary-color-dark darken-2 mt-4 wow fadeIn">
   <!--Copyright-->
   <div class="footer-copyright py-3" >
-      <a href="#" target="_blank"> Depth First Co., Ltd. </a>
+      <a href="#" target="_blank">Depth First Co., Ltd.</a>
   </div>
   <!--/.Copyright-->
 </footer>
 
 
-  
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Validation  -->
-  <script type="text/javascript" src="js/validation.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
   
 </body>
 </html>

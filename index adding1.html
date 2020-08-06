@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery -->
+ <script type="text/javascript" src="js/jquery.min.js"></script>
 
 
 
@@ -39,7 +41,6 @@
 <link rel="stylesheet" href="css main/timegridmain.css">
 <!----/.CSS---->
 
-<!----.JS----->
 </head>
 
 <body class="fixed-sn white-skin" style="font-family: 'Prompt', sans-serif;" >
@@ -589,30 +590,12 @@
         </ol>
 
         <br>
-    
-    <script language="JavaScript">
-    
-    function goView(blogId) {
-      var form = getForm();
-      form.elements['id'].value = blogId;
-      doCmd('goView');
-    }
-    
-    function goEdit(blogId) {
-      var form = getForm();
-      form.elements['id'].value = blogId;
-      doCmd('goUpdate');
-    }
-    
-    function goDelete(blogId) {
-      var form = getForm();
-      form.elements['id'].value = blogId;
-      doCmd('doDelete');
-    }
-    
-    </script>
+   
 
-<form name="WKM001" method="post" action="/uat/km/personalBlog.do" onsubmit="_submit_NestedForm(this)">
+    
+    
+
+<form class="needs-validation" novalidate name="WKM001" method="post" action="/uat/km/personalBlog.do" onsubmit="_submit_NestedForm(this)">
     
   <input type="hidden" name="cmd" value="">
   <input type="hidden" name="id" value="">
@@ -630,7 +613,7 @@
 
     <div class="card-body card-body-cascade mt-5 pb-5 mx-4" >
       <!----1st row---->
-      <div class="form-group row mb-5 align-items-md-center">
+      <div class="row  align-items-md-center">
         <div class="col-md-2 text-right px-0">
           <a>ประเภทการฝึกงาน&nbsp;:</a>
         </div>
@@ -640,8 +623,8 @@
               เลือก
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">ฝึกงาน</a>
-              <a class="dropdown-item" href="#">สหกิจ</a>
+              <a class="dropdown-item" >ฝึกงาน</a>
+              <a class="dropdown-item" >สหกิจ</a>
             </div>
           </div>
         </div>
@@ -650,64 +633,85 @@
           <a>ตำแหน่ง&nbsp;:</a>
         </div>
         <div class="col-md-4" style="display: inline-flex;">
-          <div class="dropdown pt-1 pb-2 border rounded" style="width: 290px;">
+          <div id="checkPosition" class="dropdown pt-1 pb-2 border rounded" style="width: 290px;">
             <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               ทั้งหมด
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Java Devekoper</a>
-              <a class="dropdown-item" href="#">Data Scientist</a>
-              <a class="dropdown-item" href="#">System Analysis</a>
+              <a class="dropdown-item" >Java Devekoper</a>
+              <a class="dropdown-item" >Data Scientist</a>
+              <a class="dropdown-item" >System Analysis</a>
             </div>
           </div>
           <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
         </div>
-        
+      </div>
+
+      <!--check 1strow-->
+      <div class="row mb-5">
+        <div class="col-md-2 text-right px-0"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-2 text-right px-0"></div>
+        <div class="col-md-4"><div id="showtextPosition"></div></div>
       </div>
 
       <!----2nd row---->
-      <div class="form-group row mb-5 align-items-md-center">
+      <div class="row  align-items-md-center">
         <div class="col-md-2 text-right px-0 ">
           <a class="">วันที่เริ่ม&nbsp;:</a>
         </div>
         <div class="col-md-4" style="display: inline-flex;">
-          <input type="date" class="form-control border">
+          <input type="date" id="checkFirstday" class="form-control border">
           <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
         </div>
         <div class="col-md-2 text-right px-0">
           <a class="">วันที่สิ้นสุด&nbsp;:</a>
         </div>
         <div class="col-md-4" style="display: inline-flex;">
-          <input type="date" class="form-control border">
+          <input type="date" id="checkLastday" class="form-control border">
           <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
         </div>
       </div>
 
+      <!--check 2ndrow-->
+      <div class="row mb-5">
+        <div class="col-md-2 text-right px-0"></div>
+        <div class="col-md-4"><div id="showtextFirstday"></div></div>
+        <div class="col-md-2 text-right px-0"></div>
+        <div class="col-md-4"><div id="showtextLastday"></div></div>
+      </div>
+
       <!----3rd row---->
-      <div class="form-group row mb-0 align-items-md-center">
+      <div class="row align-items-md-center">
         <div class="col-md-2  text-right px-0">
           <a class="">รวมเวลา&nbsp;:</a>
         </div>
         <div class="col-md-4">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วัน
+          <a>&nbsp;&nbsp;&nbsp;</a> วัน
         </div>
         <div class="col-md-2  text-right px-0">
           <a class="">สาขาที่ฝึกงาน&nbsp;:</a>
         </div>
         <div class="col-md-4" style="display: inline-flex;">
-          <div class="dropdown pt-1 pb-2 border rounded" style="width: 290px;">
+          <div id="checkSubsidiary" class="dropdown pt-1 pb-2 border rounded" style="width: 290px;">
             <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               ทั้งหมด
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">เชียงใหม่</a>
+              <a class="dropdown-item" >เชียงใหม่</a>
             </div>
           </div>
           <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
         </div>
-
       </div>
     
+      <!--check 3rdrow-->
+      <div class="row mb-2">
+        <div class="col-md-2 text-right px-0"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-2 text-right px-0"></div>
+        <div class="col-md-4"><div id="showtextSubsidiary"></div></div>
+      </div>
 
       
     </div>
@@ -726,53 +730,67 @@
                
               </div>
             
-                <div class="card-body">
+                <div class="card-body ml-3">
                   <!----row1----->
-                    <div class="row text-dark mb-5 align-items-md-center">
-                        <div class="col-md-1 text-right px-0 " >
+                    <div class="row text-dark align-items-md-center">
+                        <div class="col-md-1 text-right px-0 "  >
                           <a>ชื่อ&nbsp;:</a>
                         </div>
                         <div class="col-md-3 " style="display: inline-flex;">
-                          <input type="text" class="border form-control rounded">
+                          <input  type="text" id="checkName1" class="border form-control rounded" autocomplete="off">
                           <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
                         </div>
                         <div class="col-md-1 text-right px-0">
                           <a>นามสกุล&nbsp;:</a>
                         </div>
                         <div class="col-md-3 " style="display: inline-flex;">
-                          <input type="text" class="border form-control rounded">
+                          <input type="text" id="checkSurname1" class="border form-control rounded" autocomplete="off">
                           <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
                         </div>
                         <div class="col-md-1 text-right px-0 ">
                           <a>เพศ&nbsp;:</a>
                         </div>
                         <div class="col-md-3 " >
-                          <div class="dropdown pt-1 pb-2 border rounded" style="width: 215px;">
+                          <div   class="dropdown pt-1 pb-2 border rounded" style="width: 215px;">
                             <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               เลือก
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">ชาย</a>
-                              <a class="dropdown-item" href="#">หญิง</a>
+                              <a class="dropdown-item" >ชาย</a>
+                              <a class="dropdown-item" >หญิง</a>
                             </div>
                           </div>
                         </div>
                     </div>
 
+                    <!---Check row1--->
+                    <div class="row mb-5">
+                      <div class="col-md-1 text right px-0"></div>
+                      <div class="col-md-3 text right ">
+                        <div id="showtextName1"></div>
+                      </div>
+                      <div class="col-md-1 text right px-0"></div>
+                      <div class="col-md-3 text right ">
+                        <div id="showtextSurname1"></div>
+                      </div>
+                      <div class="col-md-1 text right px-0"></div>
+                      <div class="col-md-3 text right "></div>
+                    </div>
+
                     <!---row2--->
-                    <div class="row mb-5 text-dark align-items-md-center">
-                      <div class="col-md-1  text-right px-0">
+                    <div class="row  text-dark align-items-md-center">
+                      <div class="col-md-1 text-right px-0">
                         <a>Name&nbsp;:</a>
                       </div>
                       <div class="col-md-3" style="display: inline-flex;">
-                        <input type="text" class="border form-control rounded">
+                        <input type="text" id="checkName2" class="border form-control rounded">
                         <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
                       </div>
                       <div class="col-md-1  text-right px-0">
                         <a>Surname&nbsp;:</a>
                       </div>
                       <div class="col-md-3 " style="display: inline-flex;">
-                        <input type="text" class="border form-control rounded">
+                        <input type="text" id="checkSurname2" class="border form-control rounded">
                         <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
                       </div>
                       <div class="col-md-1 text-right px-0">
@@ -783,27 +801,41 @@
                       </div>
                     </div>
 
+                    <!---Check row2--->
+                    <div class="row mb-5">
+                      <div class="col-md-1 text right px-0"></div>
+                      <div class="col-md-3 text right ">
+                        <div id="showtextName2"></div>
+                      </div>
+                      <div class="col-md-1 text right px-0"></div>
+                      <div class="col-md-3 text right ">
+                        <div id="showtextSurname2"></div>
+                      </div>
+                      <div class="col-md-1 text right px-0"></div>
+                      <div class="col-md-3 text right "></div>
+                    </div>
+
                     <!--row3--->
-                    <div class="row mb-5 text-dark align-items-md-center">
+                    <div class="row text-dark align-items-md-center">
                         <div class="col-md-1 text-right px-0">
                           <a>ว/ด/ป&nbsp;เกิด&nbsp;:</a>
                         </div>
                         <div class="col-md-3" style="display: inline-flex;">
-                          <input type="text" class="border form-control rounded">
+                          <input type="text" id="checkBirthday" class="border form-control rounded">
                         <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
                         </div>
                         <div class="col-md-1 text-right px-0">
                           <a>สัญชาติ&nbsp;:</a>
                         </div>
                         <div class="col-md-3">
-                          <div class="dropdown pt-1 pb-2 border rounded" style="width: 215px;">
+                          <div  class="dropdown pt-1 pb-2 border rounded" style="width: 215px;">
                             <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                              เลือก
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">ไทย</a>
-                              <a class="dropdown-item" href="#">อินเดีย</a>
-                              <a class="dropdown-item" href="#">อังกฤษ</a>
+                              <a class="dropdown-item" >ไทย</a>
+                              <a class="dropdown-item" >อินเดีย</a>
+                              <a class="dropdown-item" >อังกฤษ</a>
                             </div>
                           </div>
                         </div>
@@ -811,21 +843,33 @@
                           <a>เชื้อชาติ&nbsp;:</a>
                         </div>
                         <div class="col-md-3">
-                          <div class="dropdown pt-1 pb-2 border rounded" style="width: 215px;">
+                          <div  class="dropdown pt-1 pb-2 border rounded" style="width: 215px;">
                             <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                              เลือก
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">ไทย</a>
-                              <a class="dropdown-item" href="#">อินเดีย</a>
-                              <a class="dropdown-item" href="#">อังกฤษ</a>
+                              <a class="dropdown-item" >ไทย</a>
+                              <a class="dropdown-item" >อินเดีย</a>
+                              <a class="dropdown-item" >อังกฤษ</a>
                             </div>
                           </div>
                         </div>
                     </div>
 
+                    <!---Check row3--->
+                    <div class="row mb-5">
+                      <div class="col-md-1 text right px-0"></div>
+                      <div class="col-md-3 text right ">
+                        <div id="showtextBirthday"></div>
+                      </div>
+                      <div class="col-md-1 text right px-0"></div>
+                      <div class="col-md-3 text right "></div>
+                      <div class="col-md-1 text right px-0"></div>
+                      <div class="col-md-3 text right "></div>
+                    </div>
+
                     <!----row4---->
-                    <div class="row mb-5 text-dark align-items-md-center">
+                    <div class="row text-dark align-items-md-center mb-5">
                       <div class="col-md-1 text-right px-0">
                         <a>ศาสนา&nbsp;:</a>
                       </div>
@@ -835,10 +879,10 @@
                            เลือก
                           </button>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">พุทธ</a>
-                            <a class="dropdown-item" href="#">อิสลาม</a>
-                            <a class="dropdown-item" href="#">คริสตร์</a>
-                            <a class="dropdown-item" href="#">ฮินดู</a>
+                            <a class="dropdown-item" >พุทธ</a>
+                            <a class="dropdown-item" >อิสลาม</a>
+                            <a class="dropdown-item" >คริสตร์</a>
+                            <a class="dropdown-item" >ฮินดู</a>
                           </div>
                         </div>
                       </div>
@@ -846,67 +890,107 @@
                         <a>หมู่โลหิต&nbsp;:</a>
                       </div>
                       <div class="col-md-3">
-                        <input type="text" class="border form-control rounded" style="width: 215px;">
+                        <input type="text"  class="border form-control rounded" style="width: 215px;">
                       </div>
                       <div class="col-md-1  text-right px-0">
                         <a class="">อายุ&nbsp;:</a>
                       </div>
                       <div class="col-md-3">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ปี
+                        <a>&nbsp;&nbsp;&nbsp;</a> ปี
                       </div>
                     </div>
 
+                   
+
                     <!---row5--->
-                    <div class="row mb-5 text-dark align-items-md-center">
-                      <div class="col-md-1 text-right px-0">
+                    <!-- <div class="row text-dark align-items-md-center">
+                      <div class=" text-right px-0">
                         <a>โทรศัพท์บ้าน&nbsp;:</a>
                       </div>
-                      <div class="col-md-3">
+                      <div class="col-md-3 ">
                           <input type="text" class="border form-control rounded" style="width: 215px;">                       
                       </div>
                       <div class="col-md-1 text-right px-0 " >
                         <a>มือถือ&nbsp;:</a>
                       </div>
                       <div class="col-md-3 " style="display: inline-flex;">
-                        <input type="text" class="border form-control rounded">
+                        <input type="text" id="checkMobile1" class="border form-control rounded">
                         <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
                       </div>
                       <div class="col-md-1 text-right px-0 " >
                         <a>ที่อยู่อีเมล&nbsp;:</a>
                       </div>
+                      <div class="ml-3" style="display: inline-flex;">
+                        <input type="text" id="checkEmail1" class="border form-control rounded" style="width: 208px;">
+                        <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                      </div>
+                    </div> -->
+
+                    <!---row5--->
+                    <div class="row text-dark align-items-md-center">
+                      <div class=" text-right px-0">
+                        <a>โทรศัพท์บ้าน&nbsp;:</a>
+                      </div>
+                      <div class="col-md ">
+                          <input type="text" class="border form-control rounded" style="width: 212px;">                       
+                      </div>
+                      <div class="col-md-1 text-right px-0 " >
+                        <a>มือถือ&nbsp;:</a>
+                      </div>
                       <div class="col-md-3 " style="display: inline-flex;">
-                        <input type="text" class="border form-control rounded">
+                        <input type="text" id="checkMobile1" class="border form-control rounded">
+                        <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                      </div>
+                      <div class="col-md-1 text-right px-0 " >
+                        <a>ที่อยู่อีเมล&nbsp;:</a>
+                      </div>
+                      <div class="col-md" style="display: inline-flex;">
+                        <input type="text" id="checkEmail1" class="border form-control rounded" style="width: 208px;">
                         <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
                       </div>
                     </div>
 
+                    <!---Check row5--->
+                    <div class="row mb-5">
+                      <div class="col-md-1 px-0"></div>
+                      <div class="col-md-3 "></div>
+                      <div class="col-md-1 px-0"></div>
+                      <div class="col-md-3 ">
+                        <div class="ml-1" id="showtextMobile1"></div>
+                      </div>
+                      <div class="col-md-1 px-0"></div>
+                      <div class="col-md-3 ">
+                        <div class="ml-1" id="showtextEmail1"></div>
+                      </div>
+                    </div>
+
                     <!----row6---->
-                    <div class="row mb-5 text-dark align-items-md-center">
+                    <!-- <div class="row mb-5 text-dark align-items-md-center">
                       <div class="col-md-1 text-right px-0" >
                         <a>บัตรประชาชนเลขที่&nbsp;:</a>
                       </div>
                       <div class="col-md-3 " style="display: inline-flex;">
-                        <input type="text" class="border form-control rounded">
+                        <input type="text" id="checkIDnumber" class="border form-control rounded" >
                         <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
                       </div>
                       <div class="col-md-1  text-right px-0">
                         <a class="">ธนาคาร&nbsp;:</a>
                       </div>
-                      <div class="col-md-3" style="display: inline-flex;">
-                        <div class="dropdown pt-1 pb-2 border rounded" style="width: 215px;">
+                      <div class="col-md-3 " style="display: inline-flex;">
+                        <div id="checkBank" class="dropdown pt-1 pb-2 border rounded" style="width: 215px;">
                           <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             เลือก
                           </button>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">ธนาคารกรุงเทพ</a>
-                            <a class="dropdown-item" href="#">ธนาคารกสิกรไทย</a>
-                            <a class="dropdown-item" href="#">ธนาคารกรุงไทย</a>
-                            <a class="dropdown-item" href="#">ธนาคารทหารไทย</a>
-                            <a class="dropdown-item" href="#">ธนาคารไทยพาณิชย์</a>
-                            <a class="dropdown-item" href="#">ธนาคารกรุงศรีอยุธยา</a>
-                            <a class="dropdown-item" href="#">ธนาคารธนชาติ</a>
-                            <a class="dropdown-item" href="#">ธนาคารยูโอบี</a>
-                            <a class="dropdown-item" href="#">ธนาคารออมสิน</a>
+                            <a class="dropdown-item" >ธนาคารกรุงเทพ</a>
+                            <a class="dropdown-item" >ธนาคารกสิกรไทย</a>
+                            <a class="dropdown-item" >ธนาคารกรุงไทย</a>
+                            <a class="dropdown-item" >ธนาคารทหารไทย</a>
+                            <a class="dropdown-item" >ธนาคารไทยพาณิชย์</a>
+                            <a class="dropdown-item" >ธนาคารกรุงศรีอยุธยา</a>
+                            <a class="dropdown-item" >ธนาคารธนชาติ</a>
+                            <a class="dropdown-item" >ธนาคารยูโอบี</a>
+                            <a class="dropdown-item" >ธนาคารออมสิน</a>
                           </div>
                         </div>
                         <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
@@ -915,19 +999,129 @@
                         <a>เลขบัญชีธนาคาร&nbsp;:</a>
                       </div>
                       <div class="col-md-3 " style="display: inline-flex;">
-                        <input type="text" class="border form-control rounded">
+                        <input type="text" id="checkBankaccount" class="border form-control rounded">
                         <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
                       </div>
-                      
+                    </div> -->
+
+                    <!--row6-->
+                    <!-- <div class="row align-items-md-center text-dark">
+                      <a>บัตรประชาชนเลขที่&nbsp;:</a>
+                      <div class="ml-3" style="display: inline-flex;">
+                        <input type="text" id="checkIDnumber" class="border form-control rounded" style="width: 170px;">
+                        <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                      </div>
+                      <div class="col-md-1 text-right px-0 ml-3">
+                        <a>ธนาคาร&nbsp;:</a>
+                      </div>
+                      <div class="ml-3" style="display: inline-flex;">
+                        <div id="checkBank" class="dropdown pt-1 pb-2 border rounded" style="width: 208px;">
+                          <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            เลือก
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" >ธนาคารกรุงเทพ</a>
+                            <a class="dropdown-item" >ธนาคารกสิกรไทย</a>
+                            <a class="dropdown-item" >ธนาคารกรุงไทย</a>
+                            <a class="dropdown-item" >ธนาคารทหารไทย</a>
+                            <a class="dropdown-item" >ธนาคารไทยพาณิชย์</a>
+                            <a class="dropdown-item" >ธนาคารกรุงศรีอยุธยา</a>
+                            <a class="dropdown-item" >ธนาคารธนชาติ</a>
+                            <a class="dropdown-item" >ธนาคารยูโอบี</a>
+                            <a class="dropdown-item" >ธนาคารออมสิน</a>
+                          </div>
+                        </div>
+                        <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                      </div>
+                      <a>เลขบัญชีธนาคาร&nbsp;:</a>
+                      <div class="ml-3" style="display: inline-flex;">
+                        <input type="text" id="checkBankaccount" class="border form-control rounded" style="width: 194px;">
+                        <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                      </div>
+                    </div> -->
+
+                    <div class="row align-items-md-center text-dark">
+                      <a>บัตรประชาชนเลขที่&nbsp;:</a>
+                      <div class="col-md pr-0" style="display: inline-flex;">
+                        <input type="text" id="checkIDnumber" class="border form-control rounded" style="width: 172px;">
+                        <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                      </div>
+                      <div class="text-right px-0 ml-3">
+                        <a>ธนาคาร&nbsp;:</a>
+                      </div>
+                      <div class="col-md" style="display: inline-flex;">
+                        <div id="checkBank" class="dropdown pt-1 pb-2 border rounded" style="width: 208px;">
+                          <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            เลือก
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" >ธนาคารกรุงเทพ</a>
+                            <a class="dropdown-item" >ธนาคารกสิกรไทย</a>
+                            <a class="dropdown-item" >ธนาคารกรุงไทย</a>
+                            <a class="dropdown-item" >ธนาคารทหารไทย</a>
+                            <a class="dropdown-item" >ธนาคารไทยพาณิชย์</a>
+                            <a class="dropdown-item" >ธนาคารกรุงศรีอยุธยา</a>
+                            <a class="dropdown-item" >ธนาคารธนชาติ</a>
+                            <a class="dropdown-item" >ธนาคารยูโอบี</a>
+                            <a class="dropdown-item" >ธนาคารออมสิน</a>
+                          </div>
+                        </div>
+                        <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                      </div>
+                      <a>เลขบัญชีธนาคาร&nbsp;:</a>
+                      <div class="col-md" style="display: inline-flex;">
+                        <input type="text" id="checkBankaccount" class="border form-control rounded" style="width: 194px;">
+                        <i class="fa fa-asterisk text-danger fa-xs mx-1 mt-3" aria-hidden="true"></i>
+                      </div>
+                    </div>
+
+                    <!---Check row6--->
+                    <div class="row mb-5">
+                      <div class="col-md-1 px-0"></div>
+                      <div class="col-md-3">
+                        <div class="ml-5" id="showtextIDnumber"></div>
+                      </div>
+                      <div class="col-md-1 px-0"></div>
+                      <div class="col-md-3 ">
+                        <div class="ml-2" id="showtextBank"></div>
+                      </div>
+                      <div class="col-md-1 px-0"></div>
+                      <div class="col-md-3 ">
+                        <div class="ml-4" id="showtextBankaccount"></div>
+                      </div>
                     </div>
 
                     <!------row7------>
-                    <div class="row mb-5 text-dark align-items-md-center">
+                    <div class="row text-dark align-items-md-center mb-5">
                       <div class="col-md-1 text-right px-0">
                         <a>ชื่อบิดา&nbsp;:</a>
                       </div>
                       <div class="col-md-3">
-                        <input type="text" class="border form-control rounded" style="width: 215px;">                       
+                        <input type="text"  class="border form-control rounded" style="width: 215px;">                       
+                    </div>
+                    <div class="col-md-1 text-right px-0">
+                      <a>อาชีพ&nbsp;:</a>
+                    </div>
+                    <div class="col-md-3">
+                      <input type="text"  class="border form-control rounded" style="width: 215px;">                       
+                    </div>
+                    <div class="col-md-1 text-right px-0">
+                      <a>อายุ&nbsp;:</a>
+                    </div>
+                    <div class="col-md-3">
+                      <input type="text"  class="border form-control rounded" style="width: 215px;">                       
+                    </div>
+                    </div>
+
+                
+
+                    <!------row8------>
+                    <div class="row text-dark align-items-md-center mb-4">
+                      <div class="col-md-1 text-right px-0">
+                        <a>ชื่อมารดา&nbsp;:</a>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="text"  class="border form-control rounded" style="width: 215px;">                       
                     </div>
                     <div class="col-md-1 text-right px-0">
                       <a>อาชีพ&nbsp;:</a>
@@ -943,34 +1137,15 @@
                     </div>
                     </div>
 
-                    <!------row8------>
-                    <div class="row mb-4 text-dark align-items-md-center">
-                      <div class="col-md-1 text-right px-0">
-                        <a>ชื่อมารดา&nbsp;:</a>
-                      </div>
-                      <div class="col-md-3">
-                        <input type="text" class="border form-control rounded" style="width: 215px;">                       
-                    </div>
-                    <div class="col-md-1 text-right px-0">
-                      <a>อาชีพ&nbsp;:</a>
-                    </div>
-                    <div class="col-md-3">
-                      <input type="text" class="border form-control rounded" style="width: 215px;">                       
-                    </div>
-                    <div class="col-md-1 text-right px-0">
-                      <a>อายุ&nbsp;:</a>
-                    </div>
-                    <div class="col-md-3">
-                      <input type="text" class="border form-control rounded" style="width: 215px;">                       
-                    </div>
-                    </div>
+                  
+
                 </div><!--/card body--->
             
             </div>
             </div>
       
+
         <!-- รายละเอียดที่อยู่-->
-      
        <div class="card">
         <div class="card-header py-4 " role="tab" id="headingOne1" style="background-color: #ADE3FB;" >
             <h6 class="mb-0 text-dark mx-3" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
@@ -978,67 +1153,71 @@
             </h6>
         </div>
         
-          <div class="card-body">
+          <div class="card-body ml-3">
 
             <!---row1---->
-            <div class="row mb-5 text-dark align-items-md-center">
+            <div class="row text-dark align-items-md-center mb-5">
               <div class="col-md-1 text-right px-0">
                 <a>บ้านเลขที่&nbsp;:</a>
               </div>
               <div class="col-md-3">
-                <input type="text" class="border form-control rounded" >   
+                <input type="text"  class="border form-control rounded" style="width: 215px;" >   
               </div>
               <div class="col-md-1 text-right px-0">
                 <a>หมู่ที่&nbsp;:</a>
               </div>
               <div class="col-md-3">
-                <input type="text" class="border form-control rounded" >   
+                <input type="text"  class="border form-control rounded" style="width: 215px;" >   
               </div>
               <div class="col-md-1 text-right px-0">
                 <a>ซอย&nbsp;:</a>
               </div>
               <div class="col-md-3">
-                <input type="text" class="border form-control rounded" >   
+                <input type="text"  class="border form-control rounded" style="width: 215px;">   
               </div>
             </div>
 
+            
+
             <!---row2---->
-            <div class="row mb-5 text-dark align-items-md-center">
+            <div class="row text-dark align-items-md-center mb-5">
               <div class="col-md-1 text-right px-0">
                 <a>อาคาร&nbsp;:</a>
               </div>
               <div class="col-md-3">
-                <input type="text" class="border form-control rounded" >   
+                <input type="text"  class="border form-control rounded" style="width: 215px;">   
               </div>
               <div class="col-md-1 text-right px-0">
                 <a>หมู่บ้าน&nbsp;:</a>
               </div>
               <div class="col-md-3">
-                <input type="text" class="border form-control rounded" >   
+                <input type="text"  class="border form-control rounded" style="width: 215px;" >   
               </div>
               <div class="col-md-1 text-right px-0">
                 <a>ถนน&nbsp;:</a>
               </div>
               <div class="col-md-3">
-                <input type="text" class="border form-control rounded" >   
+                <input type="text" class="border form-control rounded" style="width: 215px;">   
               </div>
             </div>
 
+            
+
             <!----row3----->
-            <div class="row mb-5 text-dark align-items-md-center">
+            <div class="row text-dark align-items-md-center mb-5">
               <div class="col-md-1 text-right px-0">
                 <a>จังหวัด&nbsp;:</a>
               </div>
               <div class="col-md-3">
-                <div class="dropdown pt-1 pb-2 border rounded" style="width: 235px;">
+                <div class="dropdown pt-1 pb-2 border rounded" style="width: 215px;">
                   <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    เลือก
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">กรุงเทพมหานคร</a>
-                    <a class="dropdown-item" href="#">เชียงใหม่</a>
-                    <a class="dropdown-item" href="#">ภูเก็ต</a>
-                    <a class="dropdown-item" href="#">ขอนแก่น</a>
+                    <a class="dropdown-item" >กรุงเทพมหานคร</a>
+                    <a class="dropdown-item" >เชียงใหม่</a>
+                    <a class="dropdown-item" >ภูเก็ต</a>
+                    <a class="dropdown-item" >ขอนแก่น</a>
                   </div>
                 </div>
               </div>
@@ -1046,50 +1225,48 @@
                 <a>อำเภอ/เขต&nbsp;:</a>
               </div>
               <div class="col-md-3">
-                <div class="dropdown pt-1 pb-2 border rounded" style="width: 235px;">
+                <div  class="dropdown pt-1 pb-2 border rounded" style="width: 215px;">
                   <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    เลือก
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">ตลิ่งชัน</a>
-                    <a class="dropdown-item" href="#">มีนบุรี/a>
-                    <a class="dropdown-item" href="#">สะพานสูง</a>
-                    <a class="dropdown-item" href="#">ลาดกระบัง</a>
+                    <a class="dropdown-item" >ตลิ่งชัน</a>
+                    <a class="dropdown-item" >มีนบุรี/a>
+                    <a class="dropdown-item" >สะพานสูง</a>
+                    <a class="dropdown-item" >ลาดกระบัง</a>
                   </div>
                 </div>
               </div>
-              <div class="col-md-1 text-right px-0">
+              <div class="text-right px-0">
                 <a>ตำบล/แขวง&nbsp;:</a>
               </div>
-              <div class="col-md-3">
-                <div class="dropdown pt-1 pb-2 border rounded" style="width: 235px;">
+              <div class="col-md">
+                <div  class="dropdown pt-1 pb-2 border rounded" style="width: 212px;">
                   <button class="bg-white dropdown-toggle border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    เลือก
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">ฉิมพลี</a>
-                    <a class="dropdown-item" href="#">มีนบุรี</a>
-                    <a class="dropdown-item" href="#">สะพานสูง</a>
-                    <a class="dropdown-item" href="#">ลาดกระบัง</a>
+                    <a class="dropdown-item" >ฉิมพลี</a>
+                    <a class="dropdown-item" >มีนบุรี</a>
+                    <a class="dropdown-item" >สะพานสูง</a>
+                    <a class="dropdown-item" >ลาดกระบัง</a>
                   </div>
                 </div>
               </div>
             </div>
+
             <!----row4----->
-            <div class="row mb-4 text-dark align-items-md-center">
-              <div class="col-md-1 text-right px-0">
+            <div class="row text-dark align-items-md-center mb-4">
                 <a>รหัสไปรษณีย์&nbsp;:</a>
+              <div class="col-md-3 px-2">
+                <input type="text" class="border form-control rounded" style="width: 215px;">   
               </div>
-              <div class="col-md-3">
-                <input type="text" class="border form-control rounded" >   
-              </div>
-              
             </div>
-          </div>
+
+          </div> <!--/card body-->
       </div>
     </div>
     <!----/collapse parts--->
-
   </form>
 
   <!----buttons---->
@@ -1101,7 +1278,7 @@
     </button>
     </a>
     <a href="index adding2.html">
-    <button class="btn btn-md btn-white rounded-lg ml-4" type="button">
+    <button class="btn btn-md btn-white rounded-lg ml-4" type="button" id="submit1">
       ถัดไป
       <i class="fa fa-caret-right pl-2" aria-hidden="true"></i>
     </button>
@@ -1111,6 +1288,8 @@
 
       </div> 
       <!---/container-fluid------>
+
+      
 
 
 
@@ -1128,16 +1307,16 @@
 
   
 
-  <!-- jQuery -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
+ 
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
+  <!-- Validation -->
+  <script type="text/javascript" src="js/validation.js"></script>
+  
 
 </body>
 </html>
